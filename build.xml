@@ -126,15 +126,12 @@
 				<pathelement location="${vitafarma.domain}/dom4j-1.6.1.jar" />
 				<pathelement location="${vitafarma.domain}/ehcache-1.5.0.jar" />
 				<pathelement location="${vitafarma.domain}/hibernate3.jar" />
-				<pathelement
-					location="${vitafarma.domain}/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
-				<pathelement
-					location="${vitafarma.domain}/hibernate-jpamodelgen-1.0.0.Final.jar" />
+				<pathelement location="${vitafarma.domain}/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+				<pathelement location="${vitafarma.domain}/hibernate-jpamodelgen-1.0.0.Final.jar" />
 				<pathelement location="${vitafarma.domain}/javassist-3.9.0.GA.jar" />
 				<pathelement location="${vitafarma.domain}/jta-1.1.jar" />
 				<pathelement location="${vitafarma.domain}/log4j-1.2.15.jar" />
-				<pathelement
-					location="${vitafarma.domain}/mysql-connector-java-5.0.7-bin.jar" />
+				<pathelement location="${vitafarma.domain}/mysql-connector-java-5.0.7-bin.jar" />
 				<pathelement location="${vitafarma.domain}/slf4j-api-1.5.6.jar" />
 				<pathelement location="${vitafarma.domain}/slf4j-simple-1.5.6.jar" />
 				<pathelement location="${vitafarma.domain}/jcl-over-slf4j-1.5.6.jar" />
@@ -151,7 +148,7 @@
 	</target>
 
 	<target name="deploy" depends="war">
-		<move file="${war.name}" todir="${vitafarma.workspace}/vitafarma_web/target" />
+		<move file="${war.name}" todir="${vitafarma.workspace}/vitafarma_web/distribution" />
 	</target>
 
 	<target name="all" depends="deploy" />

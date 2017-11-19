@@ -15,9 +15,9 @@
 		<maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
 		<maven-gae-plugin.version>0.9.5</maven-gae-plugin.version>
-		<gwt-maven-plugin.version>2.5.0-rc1</gwt-maven-plugin.version>
+		<gwt-maven-plugin.version>2.2.0</gwt-maven-plugin.version>
 		<maven-clean-plugin.version>2.6.1</maven-clean-plugin.version>
-		<gwt.version>2.5.0-rc1</gwt.version>
+		<gwt.version>2.2.0</gwt.version>
 		<gae.version>1.9.19</gae.version>
 		<gwtp.version>1.5</gwtp.version>
 		<guice.version>3.0</guice.version>
@@ -53,12 +53,17 @@
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
-			<version>3.8</version>
+			<version>3.8-beta4</version>
 		</dependency>
 		<dependency>
 			<groupId>com.extjs</groupId>
 			<artifactId>gxt</artifactId>
-			<version>2.2.0</version>
+			<version>2.2.5-gwt22</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.gwt-test-utils</groupId>
+			<artifactId>gwt-test-utils</artifactId>
+			<version>0.53</version>
 		</dependency>
 		<dependency>
 			<groupId>br.com.vitafarma.domain</groupId>
@@ -195,21 +200,18 @@
 		<testSourceDirectory>test</testSourceDirectory>
 		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>target\test-classes</testOutputDirectory>
-
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
 				<version>${gwt-maven-plugin.version}</version>
-
 				<configuration>
 					<module>br.com.vitafarma.web.Vitafarma</module>
 					<testTimeOut>180</testTimeOut>
 					<includes>**/*GwtTest.java</includes>
 					<mode>htmlunit</mode>
 					<extraJvmArgs>-Xss1024K -Xmx1024M -XX:MaxPermSize=512M
-						-Duser.language=en -Duser.country=US
-					</extraJvmArgs>
+						-Duser.language=en -Duser.country=US</extraJvmArgs>
 					<logLevel>INFO</logLevel>
 					<copyWebapp>true</copyWebapp>
 					<hostedWebapp>${webappDirectory}</hostedWebapp>
@@ -227,9 +229,7 @@
 						</goals>
 					</execution>
 				</executions>
-
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -241,7 +241,6 @@
 					<proc>none</proc>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -268,7 +267,6 @@
 					</webResources>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>net.kindleit</groupId>
 				<artifactId>maven-gae-plugin</artifactId>
