@@ -16,3 +16,4 @@ war/log4j.log
 /war/shared/*.cache.png
 /war/extgwt
 war/images/Thumbs.db
+distribution/

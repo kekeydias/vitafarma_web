@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='shared'>
 	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.extjs.gxt.ui.GXT' />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name="br.com.vitafarma.Domain" />
 	<source path='' />
+	<source path='client' />
+	<source path='server' />
 </module>
