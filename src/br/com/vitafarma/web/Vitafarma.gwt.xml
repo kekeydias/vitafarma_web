@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='Vitafarma'>
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.extjs.gxt.ui.GXT' />
+	<inherits name='com.googlecode.future.AsyncFuture' />
+	<inherits name="com.google.gwt.i18n.I18N" />
+	<inherits name="br.com.vitafarma.web.shared.Shared" />
+	<inherits name="br.com.vitafarma.Domain" />
+
+	<entry-point class='br.com.vitafarma.web.client.Vitafarma' />
+	<source path='client' />
+	<source path='shared' />
+</module>

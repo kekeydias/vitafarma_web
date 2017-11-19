@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="vitafarma" default="all" basedir="D:\Vitafarma\workspaces\VitafarmaWeb">
+	<property name="gwt.home" value="D:/Vitafarma/gwt-2.5.0.rc1" />
+	<property name="gwt.module.id" value="br.com.vitafarma.web.Vitafarma" />
+	<property name="war.name" value="Vitafarma.war" />
+	<property name="vitafarma.domain" value="D:/Vitafarma/bibliotecas/vitafarma-domain" />
+	<property name="vitafarma.web" value="D:/Vitafarma/bibliotecas/vitafarma-web" />
+	<property name="vitafarma.workspace" value="D:/Vitafarma/workspaces" />
+	<property name="vitafarma.lib" value="D:/Vitafarma/bibliotecas" />
+
+	<target name="jars" description="Package up the module project and required projects as jars">
+		<mkdir dir="war/WEB-INF/lib" />
+		<!--=== VitafarmaWeb === -->
+		<jar destfile='war/WEB-INF/lib/VitafarmaWeb.jar'>
+			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/src"><include name="**" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/test"><include name="**" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/resources"><include name="**" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes"><include name="**/*.class" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes"><include name="**/*.class" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes"><include name="**/*.class" /></fileset>
+		</jar>
+
+		<!--=== WEB-INF/lib === -->
+		<copy todir='war/WEB-INF/lib'>
+			<fileset dir="${vitafarma.lib}/vitafarma-web/">
+				<include name="**/*.jar" />
+				<include name="**/*.zip" />
+			</fileset>
+		</copy>
+
+		<!--=== WEB-INF/lib === -->
+		<copy todir='war/WEB-INF/lib'>
+			<fileset dir="${gwt.home}">
+				<include name="gwt-user.jar" />
+				<include name="gwt-servlet.jar" />
+			</fileset>
+		</copy>
+
+		<!--=== WEB-INF/lib === -->
+		<copy todir='war/WEB-INF/lib'>
+			<fileset dir="${vitafarma.domain}">
+				<include name="**/*.jar" />
+				<include name="**/*.zip" />
+			</fileset>
+		</copy>
+
+		<!--=== WEB-INF/lib === -->
+		<copy todir='war/WEB-INF/lib'>
+			<fileset dir="${vitafarma.web}">
+				<include name="**/*.jar" />
+				<include name="**/*.zip" />
+			</fileset>
+		</copy>
+
+		<!--=== VitafarmaDomain === -->
+		<jar destfile='war/WEB-INF/lib/VitafarmaDomain.jar'>
+			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/resources"><include name="**" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/src"><include name="**" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/test"><include name="**" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/target/classes"><include name="**/*.class" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/target/classes"><include name="**/*.class" /></fileset>
+			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/target/classes"><include name="**/*.class" /></fileset>
+		</jar>
+	</target>
+
+	<target name="gwt-compile" description="Compile to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" fork="yes" failonerror="true" maxmemory="1024m">
+			<classpath>
+				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/src" />
+				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/test" />
+				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/resources" />
+				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/resources" />
+				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/src" />
+				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/test" />
+				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes" />
+
+				<pathelement location="${vitafarma.web}/gwt-async-future-1.0.2.jar" />
+				<pathelement location="${vitafarma.web}/gwt-2.2.5.jar" />
+				<pathelement location="${vitafarma.web}/poi-3.8-beta4.jar" />
+				<pathelement location="${vitafarma.web}/ejb3-persistence.jar" />
+				<pathelement location="${vitafarma.web}/validation-api-1.0.0.GA.jar" />
+				<pathelement location="${vitafarma.web}/hibernate-validator-4.0.2.GA.jar" />
+				<pathelement location="${vitafarma.web}/gxt-2.0.1.jar" />
+
+				<pathelement location="${gwt.home}/gwt-user.jar" />
+				<pathelement location="${gwt.home}/gwt-dev.jar" />
+				<pathelement location="${gwt.home}/validation-api-1.0.0.GA-sources.jar" />
+				<pathelement location="${gwt.home}/validation-api-1.0.0.GA.jar" />
+
+				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/target/classes" />
+
+				<pathelement location="${vitafarma.domain}/antlr-2.7.6.jar" />
+				<pathelement location="${vitafarma.domain}/c3p0-0.9.1.jar" />
+				<pathelement location="${vitafarma.domain}/commons-collections-3.1.jar" />
+				<pathelement location="${vitafarma.domain}/dom4j-1.6.1.jar" />
+				<pathelement location="${vitafarma.domain}/ehcache-1.5.0.jar" />
+				<pathelement location="${vitafarma.domain}/hibernate3.jar" />
+				<pathelement location="${vitafarma.domain}/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+				<pathelement location="${vitafarma.domain}/hibernate-jpamodelgen-1.0.0.Final.jar" />
+				<pathelement location="${vitafarma.domain}/javassist-3.9.0.GA.jar" />
+				<pathelement location="${vitafarma.domain}/jta-1.1.jar" />
+				<pathelement location="${vitafarma.domain}/log4j-1.2.15.jar" />
+				<pathelement location="${vitafarma.domain}/mysql-connector-java-5.0.7-bin.jar" />
+				<pathelement location="${vitafarma.domain}/slf4j-api-1.5.6.jar" />
+				<pathelement location="${vitafarma.domain}/slf4j-simple-1.5.6.jar" />
+				<pathelement location="${vitafarma.domain}/jcl-over-slf4j-1.5.6.jar" />
+			</classpath>
+			<arg value="-style" />
+			<arg value="DETAILED" />
+			<arg value="${gwt.module.id}" />
+		</java>
+	</target>
+
+	<target name="war" depends="gwt-compile, jars">
+		<delete file="${war.name}" />
+		<jar destfile="${war.name}" basedir="war" duplicate="preserve" />
+	</target>
+
+	<target name="deploy" depends="war">
+		<move file="${war.name}" todir="${vitafarma.workspace}/VitafarmaWeb/target" />
+	</target>
+
+	<target name="all" depends="deploy" />
+</project>

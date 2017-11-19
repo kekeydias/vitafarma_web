@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- Greet -->
+	<servlet>
+		<servlet-name>greetServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.GreetingServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>greetServlet</servlet-name>
+		<url-pattern>/Vitafarma/greet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Uniques -->
+	<servlet>
+		<servlet-name>uniquesServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.UniquesServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uniquesServlet</servlet-name>
+		<url-pattern>/Vitafarma/uniques</url-pattern>
+	</servlet-mapping>
+
+	<!-- cenarios -->
+	<servlet>
+		<servlet-name>cenariosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.CenariosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cenariosServlet</servlet-name>
+		<url-pattern>/Vitafarma/cenarios</url-pattern>
+	</servlet-mapping>
+
+	<!-- laboratorios -->
+	<servlet>
+		<servlet-name>laboratoriosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.LaboratoriosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>laboratoriosServlet</servlet-name>
+		<url-pattern>/Vitafarma/laboratorios</url-pattern>
+	</servlet-mapping>
+
+	<!-- usuarios -->
+	<servlet>
+		<servlet-name>usuariosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.UsuariosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>usuariosServlet</servlet-name>
+		<url-pattern>/Vitafarma/usuarios</url-pattern>
+	</servlet-mapping>
+
+	<!-- clientes -->
+	<servlet>
+		<servlet-name>clientesServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.ClientesServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>clientesServlet</servlet-name>
+		<url-pattern>/Vitafarma/clientes</url-pattern>
+	</servlet-mapping>
+
+	<!-- fornecedores -->
+	<servlet>
+		<servlet-name>fornecedoresServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.FornecedoresServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fornecedoresServlet</servlet-name>
+		<url-pattern>/Vitafarma/fornecedores</url-pattern>
+	</servlet-mapping>
+
+	<!-- funcionarios -->
+	<servlet>
+		<servlet-name>funcionariosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.FuncionariosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>funcionariosServlet</servlet-name>
+		<url-pattern>/Vitafarma/funcionarios</url-pattern>
+	</servlet-mapping>
+
+	<!-- vendedores -->
+	<servlet>
+		<servlet-name>vendedoresServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.VendedoresServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vendedoresServlet</servlet-name>
+		<url-pattern>/Vitafarma/vendedores</url-pattern>
+	</servlet-mapping>
+
+	<!-- produtos -->
+	<servlet>
+		<servlet-name>produtosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.ProdutosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>produtosServlet</servlet-name>
+		<url-pattern>/Vitafarma/produtos</url-pattern>
+	</servlet-mapping>
+
+	<!-- exportExcel -->
+	<servlet>
+		<servlet-name>exportExcelServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.excel.exp.ExportExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>exportExcelServlet</servlet-name>
+		<url-pattern>/Vitafarma/exportExcelServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- importExcel -->
+	<servlet>
+		<servlet-name>importExcelServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.excel.imp.ImportExcelServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>importExcelServlet</servlet-name>
+		<url-pattern>/Vitafarma/importExcelServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- vendas -->
+	<servlet>
+		<servlet-name>vendasServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.VendasServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>vendasServlet</servlet-name>
+		<url-pattern>/Vitafarma/vendas</url-pattern>
+	</servlet-mapping>
+
+	<!-- entradaProdutos -->
+	<servlet>
+		<servlet-name>entradaProdutosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.EntradaProdutosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>entradaProdutosServlet</servlet-name>
+		<url-pattern>/Vitafarma/entradaProdutos</url-pattern>
+	</servlet-mapping>
+
+	<!-- estados -->
+	<servlet>
+		<servlet-name>estadosServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.EstadosServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>estadosServlet</servlet-name>
+		<url-pattern>/Vitafarma/estados</url-pattern>
+	</servlet-mapping>
+
+	<!-- cidades -->
+	<servlet>
+		<servlet-name>cidadesServlet</servlet-name>
+		<servlet-class>br.com.vitafarma.web.server.CidadesServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cidadesServlet</servlet-name>
+		<url-pattern>/Vitafarma/cidades</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Vitafarma.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value />
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

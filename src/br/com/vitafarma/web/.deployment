@@ -1,0 +1,5 @@
+#Fri Jun 22 20:26:55 BRT 2012
+war.name=Vitafarma.war
+compiler.style=OBFUSCATED
+server.path=H\:\\Vitafarma\\workspaces\\VitafarmaWeb\\target
+compiler.memory.max=1024m

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="ImageViewer" default="all" basedir="D:\Vitafarma\workspaces\VitafarmaWeb">
+	<description>
+		This is build file for GWT module
+		'br.com.vitafarma.web.Vitafarma' deployment.
+		GWT Designer generates it
+		each time when you initiate deployment.
+
+		You can use this file later for manual deployment, but keep in mind, that
+		classpath is hardcoded in it, so after changes in classpath you should
+		regenerate build file.
+	</description>
+
+	<property name="gwt.home" value="D:/Vitafarma/bibliotecas/gwt-2.4.0" />
+	<property name="gwt.module.id" value="br.com.vitafarma.web.Vitafarma" />
+	<property name="war.name" value="Vitafarma.war" />
+
+	<target name="jars"
+		description="Package up the module project and required projects as jars">
+		<mkdir dir="war/WEB-INF/lib" />
+		<!--=== VitafarmaWeb === -->
+		<jar destfile='war/WEB-INF/lib/VitafarmaWeb.jar'>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaWeb/src">
+				<include name="**" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaWeb/test">
+				<include name="**" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaWeb/resources">
+				<include name="**" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaWeb/war/WEB-INF/classes">
+				<include name="**/*.class" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaWeb/war/WEB-INF/classes">
+				<include name="**/*.class" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaWeb/war/WEB-INF/classes">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+		<copy todir='war/WEB-INF/lib'>
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-web\gwt-async-future-1.0.2.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-web\gwt-2.2.5.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-web\poi-3.8-beta4.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-web\validation-api-1.0.0.GA.jar" />
+			<fileset
+				file="D:\Vitafarma\bibliotecas\vitafarma-web\hibernate-validator-4.0.2.GA.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\gwt-2.4.0\gwt-dev.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\gwt-2.4.0\validation-api-1.0.0.GA-sources.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\gwt-2.4.0\validation-api-1.0.0.GA.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\antlr-2.7.6.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\c3p0-0.9.1.jar" />
+			<fileset
+				file="D:\Vitafarma\bibliotecas\vitafarma-domain\commons-collections-3.1.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\dom4j-1.6.1.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\ehcache-1.5.0.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\hibernate3.jar" />
+			<fileset
+				file="D:\Vitafarma\bibliotecas\vitafarma-domain\hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+			<fileset
+				file="D:\Vitafarma\bibliotecas\vitafarma-domain\hibernate-jpamodelgen-1.0.0.Final.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\javassist-3.9.0.GA.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\jta-1.1.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\log4j-1.2.15.jar" />
+			<fileset
+				file="D:\Vitafarma\bibliotecas\vitafarma-domain\mysql-connector-java-5.0.7-bin.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\slf4j-api-1.5.6.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\slf4j-simple-1.5.6.jar" />
+			<fileset file="D:\Vitafarma\bibliotecas\vitafarma-domain\jcl-over-slf4j-1.5.6.jar" />
+		</copy>
+		<!--=== VitafarmaDomain === -->
+		<jar destfile='war/WEB-INF/lib/VitafarmaDomain.jar'>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaDomain/resources">
+				<include name="**" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaDomain/src">
+				<include name="**" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaDomain/test">
+				<include name="**" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaDomain/target/classes">
+				<include name="**/*.class" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaDomain/target/classes">
+				<include name="**/*.class" />
+			</fileset>
+			<fileset dir="D:/Vitafarma/workspaces/VitafarmaDomain/target/classes">
+				<include name="**/*.class" />
+			</fileset>
+		</jar>
+	</target>
+
+	<target name="gwt-compile" description="Compile to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" fork="yes"
+			failonerror="true" maxmemory="1024m">
+			<classpath>
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaWeb/src" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaWeb/test" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaWeb/resources" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaDomain/resources" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaDomain/src" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaDomain/test" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaWeb/war/WEB-INF/classes" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-web/gwt-async-future-1.0.2.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-web/gwt-2.2.5.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-web/poi-3.8-beta4.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-web/validation-api-1.0.0.GA.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-web/hibernate-validator-4.0.2.GA.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/gwt-2.4.0/gwt-user.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/gwt-2.4.0/gwt-dev.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/gwt-2.4.0/validation-api-1.0.0.GA-sources.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/gwt-2.4.0/validation-api-1.0.0.GA.jar" />
+				<pathelement location="D:/Vitafarma/workspaces/VitafarmaDomain/target/classes" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/antlr-2.7.6.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/c3p0-0.9.1.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/commons-collections-3.1.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/dom4j-1.6.1.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/ehcache-1.5.0.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/hibernate3.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/hibernate-jpa-2.0-api-1.0.0.Final.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/hibernate-jpamodelgen-1.0.0.Final.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/javassist-3.9.0.GA.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/jta-1.1.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/log4j-1.2.15.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/mysql-connector-java-5.0.7-bin.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/vitafarma-domain/slf4j-api-1.5.6.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/slf4j-simple-1.5.6.jar" />
+				<pathelement
+					location="D:/Vitafarma/bibliotecas/vitafarma-domain/jcl-over-slf4j-1.5.6.jar" />
+				<pathelement location="D:/Vitafarma/bibliotecas/gwt-2.4.0/gwt-dev.jar" />
+			</classpath>
+			<arg value="-style" />
+			<arg value="DETAILED" />
+			<arg value="${gwt.module.id}" />
+		</java>
+	</target>
+
+	<target name="war" depends="gwt-compile, jars">
+		<delete file="${war.name}" />
+		<jar destfile="${war.name}" basedir="war" duplicate="preserve" />
+	</target>
+
+	<target name="deploy" depends="war">
+		<move file="${war.name}" todir="D:/Vitafarma/workspaces/VitafarmaWeb/target" />
+	</target>
+
+	<target name="all" depends="deploy" />
+
+</project>

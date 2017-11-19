@@ -1,0 +1,5 @@
+package br.com.vitafarma.web.shared.util.view;
+
+public enum UniqueDomain {
+	CIDADE, ESTADO_NOME, ESTADO_SIGLA, CLIENTE, FORNECEDOR, FUNCIONARIO, LABORATORIO_CNPJ, LABORATORIO_MED_LAB, NOTA_FISCAL, PRODUTO, VENDEDOR;
+}
