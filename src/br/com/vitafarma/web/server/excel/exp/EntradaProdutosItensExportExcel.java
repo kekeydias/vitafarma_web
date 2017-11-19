@@ -99,19 +99,19 @@ public class EntradaProdutosItensExportExcel extends AbstractExportExcel {
 
 	private int writeData(EntradaProduto entradaProduto, int row,
 			HSSFSheet sheet) {
-		// C骴igo do grupo de entrada
+		// C贸digo do grupo de entrada
 		this.setCell(row, 2, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				entradaProduto.getEntradaProdutoGroup().getId());
 
-		// C骴igo da Nota Fiscal
+		// C贸digo da Nota Fiscal
 		String notaFiscalStr = (entradaProduto.getNotaFiscal() == null ? "-----"
 				: entradaProduto.getNotaFiscal().getCodigo());
 		this.setCell(row, 3, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				notaFiscalStr);
 
-		// C骴igo do Fornecedor
+		// C贸digo do Fornecedor
 		this.setCell(row, 4, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				entradaProduto.getFornecedor().getId());
@@ -121,7 +121,7 @@ public class EntradaProdutosItensExportExcel extends AbstractExportExcel {
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				entradaProduto.getFornecedor().getNome());
 
-		// C骴igo do Produto
+		// C贸digo do Produto
 		this.setCell(row, 6, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				entradaProduto.getProduto().getId());
@@ -138,7 +138,7 @@ public class EntradaProdutosItensExportExcel extends AbstractExportExcel {
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				quantidade.toString());
 
-		// Pre鏾 Unit醨io
+		// Pre莽o Unit谩rio
 		VitafarmaCurrency precoUnitario = new VitafarmaCurrency(
 				entradaProduto.getPrecoUnitario());
 		this.setCell(row, 9, sheet,

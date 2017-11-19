@@ -107,7 +107,7 @@ public class VendasFormPresenter implements Presenter {
 		// Data da venda
 		vendaDTO.setVendaDataValue(this.display.getDataVendaTextField().getValue());
 
-		// Hor·rio da venda
+		// Hor√°rio da venda
 		Time time = this.display.getHorarioVendaTextField().getValue();
 		vendaDTO.setVendaHora(time == null ? null : time.getHour());
 		vendaDTO.setVendaMinuto(time == null ? null : time.getMinutes());

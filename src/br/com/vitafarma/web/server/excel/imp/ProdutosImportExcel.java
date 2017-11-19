@@ -118,7 +118,7 @@ public class ProdutosImportExcel extends AbstractImportExcel<ProdutosImportExcel
 
 	private boolean doSyntacticValidation(String sheetName, List<ProdutosImportExcelBean> sheetContent) {
 		// Map utilizado para associar um erro
-		// às linhas do arquivo onde o mesmo ocorre
+		// Ã s linhas do arquivo onde o mesmo ocorre
 
 		// [ ImportExcelError -> Lista de linhas onde o erro ocorre ]
 		Map<ImportExcelError, List<Integer>> syntacticErrorsMap = new HashMap<ImportExcelError, List<Integer>>();
@@ -158,10 +158,10 @@ public class ProdutosImportExcel extends AbstractImportExcel<ProdutosImportExcel
 	}
 
 	private void checkUniqueness(List<ProdutosImportExcelBean> sheetContent) {
-		// Map com os códigos dos produtos e as linhas
+		// Map com os cÃ³digos dos produtos e as linhas
 		// em que o mesmo aparece no arquivo de entrada
 
-		// [ CódigoProduto -> Lista de Linhas do Arquivo de Entrada ]
+		// [ CÃ³digoProduto -> Lista de Linhas do Arquivo de Entrada ]
 		Map<String, List<Integer>> produtosCodigoToRowsMap = new HashMap<String, List<Integer>>();
 
 		for (ProdutosImportExcelBean bean : sheetContent) {

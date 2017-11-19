@@ -25,7 +25,6 @@ import com.extjs.gxt.ui.client.widget.layout.FitLayout;
 import com.extjs.gxt.ui.client.widget.toolbar.PagingToolBar;
 import com.google.gwt.user.client.Element;
 
-@SuppressWarnings("deprecation")
 public class SimpleGrid<M extends BaseModel> extends ContentPanel {
 	private Grid<M> grid;
 	private RpcProxy<PagingLoadResult<M>> proxy;

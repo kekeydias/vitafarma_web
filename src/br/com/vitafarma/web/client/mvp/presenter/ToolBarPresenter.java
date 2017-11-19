@@ -156,7 +156,7 @@ public class ToolBarPresenter implements Presenter {
 			}
 		});
 
-		// LABORATÓRIOS
+		// LABORATÃ“RIOS
 		this.toolBar.getLaboratorioNovoLaboratoriosButton().addSelectionListener(new SelectionListener<ButtonEvent>() {
 			@Override
 			public void componentSelected(ButtonEvent ce) {

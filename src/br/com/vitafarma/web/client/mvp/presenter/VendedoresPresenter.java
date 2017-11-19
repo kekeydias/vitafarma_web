@@ -190,7 +190,7 @@ public class VendedoresPresenter implements Presenter {
 			@Override
 			public void onSuccess(CidadeDTO result) {
 
-				// EdiÁ„o do vendedor contendo a cidade
+				// Edi√ß√£o do vendedor contendo a cidade
 				Presenter presenter = new VendedoresFormPresenter(new VendedoresFormView(vendedorDTO, result),
 						display.getGrid());
 
@@ -200,7 +200,7 @@ public class VendedoresPresenter implements Presenter {
 			@Override
 			public void onFailure(Throwable caught) {
 
-				// EdiÁ„o do vendedor n„o contendo a cidade
+				// Edi√ß√£o do vendedor n√£o contendo a cidade
 				Presenter presenter = new VendedoresFormPresenter(new VendedoresFormView(vendedorDTO),
 						display.getGrid());
 

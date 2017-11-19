@@ -69,7 +69,7 @@ public class EntradaProdutosGroupExportExcel extends AbstractExportExcel {
 
 	@Override
 	protected boolean fillInExcel(HSSFWorkbook workbook) {
-		// Verifica se pelo menos um dos par‚metros
+		// Verifica se pelo menos um dos par√¢metros
 		// foi informado como filtro de busca
 		Long codigoFornecedor = this.getParametros().getCodigoFornecedor();
 		String nomeFornecedor = this.getParametros().getNomeFornecedor();
@@ -108,14 +108,14 @@ public class EntradaProdutosGroupExportExcel extends AbstractExportExcel {
 
 	private int writeData(EntradaProdutoGroup entradaProdutoGroup, int row,
 			HSSFSheet sheet) {
-		// CÛdigo da Nota Fiscal
+		// C√≥digo da Nota Fiscal
 		String notaFiscalStr = (entradaProdutoGroup.getNotaFiscal() == null ? "-----"
 				: entradaProdutoGroup.getNotaFiscal().getCodigo());
 		this.setCell(row, 2, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				notaFiscalStr);
 
-		// CÛdigo do Fornecedor
+		// C√≥digo do Fornecedor
 		this.setCell(row, 3, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				entradaProdutoGroup.getFornecedor().getId());

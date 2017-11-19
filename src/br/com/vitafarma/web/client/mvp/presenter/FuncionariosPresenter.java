@@ -185,7 +185,7 @@ public class FuncionariosPresenter implements Presenter {
 
 			@Override
 			public void onSuccess(CidadeDTO result) {
-				// EdiÁ„o do funcion·rio contendo a cidade
+				// Edi√ß√£o do funcion√°rio contendo a cidade
 				Presenter presenter = new FuncionariosFormPresenter(new FuncionariosFormView(funcionarioDTO, result),
 						display.getGrid());
 
@@ -194,7 +194,7 @@ public class FuncionariosPresenter implements Presenter {
 
 			@Override
 			public void onFailure(Throwable caught) {
-				// EdiÁ„o do funcion·rio n„o contendo a cidade
+				// Edi√ß√£o do funcion√°rio n√£o contendo a cidade
 				Presenter presenter = new FuncionariosFormPresenter(new FuncionariosFormView(funcionarioDTO),
 						display.getGrid());
 

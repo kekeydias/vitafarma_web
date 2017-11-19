@@ -100,7 +100,7 @@ public class EntradaProdutosItensFormPresenter implements Presenter {
 		EntradaProdutoDTO entradaProdutoDTO = this.display
 				.getEntradaProdutoDTO();
 
-		// PreÁo Unit·rio
+		// Pre√ßo Unit√°rio
 		entradaProdutoDTO.setPrecoUnitarioValue(this.display
 				.getPrecoUnitarioTextField().getValue() == null ? null
 				: this.display.getPrecoUnitarioTextField().getValue()

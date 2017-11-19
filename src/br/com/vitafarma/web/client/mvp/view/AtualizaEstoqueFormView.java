@@ -82,7 +82,7 @@ public class AtualizaEstoqueFormView extends MyComposite implements
 	}
 
 	private void createChangeListener() {
-		// Quando marcamos a opção 'atualizar todos', a opção
+		// Quando marcamos a opÃ§Ã£o 'atualizar todos', a opÃ§Ã£o
 		// de filtro por produto deve ser desabilitada
 		Listener<FieldEvent> listener = new Listener<FieldEvent>() {
 			public void handleEvent(FieldEvent be) {

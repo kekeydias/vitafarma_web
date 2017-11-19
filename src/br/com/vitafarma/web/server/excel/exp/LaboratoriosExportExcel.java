@@ -89,7 +89,7 @@ public class LaboratoriosExportExcel extends AbstractExportExcel {
 	}
 
 	private int writeData(Laboratorio laboratorio, int row, HSSFSheet sheet) {
-		// Código ABCFARMA
+		// CÃ³digo ABCFARMA
 		this.setCell(row, 2, sheet,
 				cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				laboratorio.getMedLab());

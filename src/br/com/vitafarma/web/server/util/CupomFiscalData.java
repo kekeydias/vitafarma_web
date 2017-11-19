@@ -226,7 +226,7 @@ public class CupomFiscalData {
 			versaoSistema = "---";
 		}
 
-		return ("VERS√O: " + versaoSistema + " ECF: " + versaoEcf + " LJ: " + codigoLoja + " OPR: " + operadorCaixa);
+		return ("VERS√ÉO: " + versaoSistema + " ECF: " + versaoEcf + " LJ: " + codigoLoja + " OPR: " + operadorCaixa);
 	}
 
 	public final static String montaItemCodigoDescricao(Integer codigoItem, ItemVenda itemVenda) {
@@ -279,7 +279,7 @@ public class CupomFiscalData {
 			quantidadeStr = VitafarmaUtil.formatCurrencyValueString(itemVenda.getQuantidade());
 		}
 
-		// Preco unit·rio (sem desconto)
+		// Preco unit√°rio (sem desconto)
 		String precoUnitarioStr = "";
 		if (itemVenda.getPrecoUnitario() == null) {
 			precoUnitarioStr = VitafarmaUtil.formatCurrencyValueString(0.0);
@@ -295,7 +295,7 @@ public class CupomFiscalData {
 			descontoItemStr = " (-" + VitafarmaUtil.formatCurrencyValueString(itemVenda.getDesconto()) + "%)";
 		}
 
-		// PreÁo final do item (com o desconto)
+		// Pre√ßo final do item (com o desconto)
 		String precoFinalItem = "";
 		if (itemVenda.getPrecoFinal() == null) {
 			precoFinalItem = VitafarmaUtil.formatCurrencyValueString(0.0);

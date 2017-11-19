@@ -100,7 +100,7 @@ public class ClientesFormView extends MyComposite implements
 		this.telefoneTF.setEmptyText("Preencha o telefone");
 		geralFS.add(this.telefoneTF, formData);
 
-		// Endereço
+		// EndereÃ§o
 		this.enderecoTF = new TextField<String>();
 		this.enderecoTF.setName(ClienteDTO.PROPERTY_CLIENTE_ENDERECO);
 		this.enderecoTF.setValue(this.clienteDTO.getEndereco());

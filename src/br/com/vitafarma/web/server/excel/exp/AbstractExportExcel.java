@@ -225,7 +225,7 @@ public abstract class AbstractExportExcel implements IExportExcel {
 		Calendar date = Calendar.getInstance();
 
 		// Utilizado para limpar todas as
-		// informa��es e não escrever no excel hh:mm:ss
+		// informações e nÃ£o escrever no excel hh:mm:ss
 		date.clear();
 
 		date.set(ano, mes - 1, 1);

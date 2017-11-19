@@ -109,7 +109,7 @@ public class EntradaProdutosGroupFormView extends MyComposite implements
 		this.dataEntradaTF.setEmptyText("Preencha a data da entrada");
 		geralFS.add(this.dataEntradaTF, formData);
 
-		// Hor·rio da entrada
+		// Hor√°rio da entrada
 		Date dataEntrada = (this.entradaProdutoGroupDTO.getDataEntradaValue() == null ? new Date()
 				: this.entradaProdutoGroupDTO.getDataEntradaValue());
 

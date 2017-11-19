@@ -125,14 +125,14 @@ public abstract class AbstractImportExcel<ExcelBeanType> implements
 			for (int sheetIndex = 0; sheetIndex < workbook.getNumberOfSheets(); sheetIndex++) {
 				HSSFSheet sheet = workbook.getSheetAt(sheetIndex);
 
-				// Verifica se a aba deve ou n„o ser processada
+				// Verifica se a aba deve ou n√£o ser processada
 				if (this.sheetMustBeProcessed(sheetIndex, sheet, workbook)) {
 
 					List<ExcelBeanType> excelBeansList = new ArrayList<ExcelBeanType>();
 					excelBeansMap.put(workbook.getSheetName(sheetIndex),
 							excelBeansList);
 
-					// Procura cabeÁalho
+					// Procura cabe√ßalho
 					List<String> headerColumnsNames = this
 							.getHeaderColumnsNames(sheetIndex, sheet, workbook);
 
@@ -223,7 +223,7 @@ public abstract class AbstractImportExcel<ExcelBeanType> implements
 			}
 
 			// Verifica se todas as colunas
-			// necess·rias foram encontradas no header
+			// necess√°rias foram encontradas no header
 			boolean test = true;
 
 			for (int i = 0; i < columnStatus.length; i++) {

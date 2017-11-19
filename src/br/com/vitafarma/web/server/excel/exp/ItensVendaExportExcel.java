@@ -95,17 +95,17 @@ public class ItensVendaExportExcel extends AbstractExportExcel {
 	}
 
 	private int writeData(ItemVenda item, int row, HSSFSheet sheet) {
-		// Código da venda
+		// CÃ³digo da venda
 		this.setCell(row, 2, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], item
 						.getVenda().getId());
 
-		// Código do item
+		// CÃ³digo do item
 		this.setCell(row, 3, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				item.getId());
 
-		// Código do produto
+		// CÃ³digo do produto
 		this.setCell(row, 4, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], item
 						.getProduto().getId());
@@ -125,7 +125,7 @@ public class ItensVendaExportExcel extends AbstractExportExcel {
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				item.getDesconto());
 
-		// Preço Final
+		// PreÃ§o Final
 		this.setCell(row, 8, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				VitafarmaUtil.parseVitafarmaCurrency(item.getPrecoFinal())

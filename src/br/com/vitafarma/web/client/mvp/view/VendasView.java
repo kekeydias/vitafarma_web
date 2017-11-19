@@ -67,13 +67,13 @@ public class VendasView extends MyComposite implements VendasPresenter.Display {
 
 		this.toolBar.add(new SeparatorToolItem());
 
-		// Bot„o de inclus„o de itens na venda
+		// Bot√£o de inclus√£o de itens na venda
 		this.incluirItensVendaBT = this.toolBar.createButton(this
 				.getI18nConstants().incluirItensVenda(), Resources.DEFAULTS
 				.incluirItemVenda16());
 		this.toolBar.add(this.incluirItensVendaBT);
 
-		// Bot„o de emiss„o do cupom fiscal da venda
+		// Bot√£o de emiss√£o do cupom fiscal da venda
 		this.emitirCupomVendaBT = this.toolBar.createButton(this
 				.getI18nConstants().emitirCupomFiscalVenda(),
 				Resources.DEFAULTS.exportar16());

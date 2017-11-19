@@ -103,7 +103,7 @@ public class ProdutosServiceImpl extends VitafarmaRemoteService implements Produ
 
 		String nomeProduto = loadConfig.get("query").toString();
 
-		// Método utilizado pela classe 'ProdutosComboBox',
+		// MÃ©todo utilizado pela classe 'ProdutosComboBox',
 		// evitando que se carregue todos os produtos na query
 		List<Produto> list = null;
 
@@ -178,7 +178,7 @@ public class ProdutosServiceImpl extends VitafarmaRemoteService implements Produ
 			Date dataInicio, Date dataFim) {
 		List<RelatorioBalancoDTO> relatoriosBalancoDTO = new ArrayList<RelatorioBalancoDTO>();
 
-		// Relatório de Vendas
+		// RelatÃ³rio de Vendas
 		Set<Venda> setVendas = new HashSet<Venda>();
 
 		List<ItemVenda> itensVenda = ItemVenda.findBy(produto, cliente, dataInicio, dataFim);
@@ -196,7 +196,7 @@ public class ProdutosServiceImpl extends VitafarmaRemoteService implements Produ
 					VitafarmaUtil.getVitafarmaDate(venda.getDataVenda()), venda.getValorTotalVenda()));
 		}
 
-		// Relatório de Entradas de Produtos
+		// RelatÃ³rio de Entradas de Produtos
 		List<EntradaProduto> entradas = EntradaProduto.findBy(produto, fornecedor, dataInicio, dataFim);
 
 		Collections.sort(entradas);

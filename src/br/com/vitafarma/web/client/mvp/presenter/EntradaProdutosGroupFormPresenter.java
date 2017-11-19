@@ -112,7 +112,7 @@ public class EntradaProdutosGroupFormPresenter implements Presenter {
 				.getDataEntradaTextField().getValue());
 		entradaProdutoGroupDTO.setDataEntradaValue(dataEntrada);
 
-		// Hor·rio da entrada de produtos
+		// Hor√°rio da entrada de produtos
 		Time time = this.display.getHorarioEntradaTextField().getValue();
 		entradaProdutoGroupDTO.setEntradaProdutoHora(time == null ? null : time
 				.getHour());

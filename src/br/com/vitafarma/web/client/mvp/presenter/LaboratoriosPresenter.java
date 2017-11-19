@@ -196,7 +196,7 @@ public class LaboratoriosPresenter implements Presenter {
 			@Override
 			public void onSuccess(CidadeDTO result) {
 
-				// EdiÁ„o do laboratÛrio contendo a cidade
+				// Edi√ß√£o do laborat√≥rio contendo a cidade
 				Presenter presenter = new LaboratoriosFormPresenter(new LaboratoriosFormView(laboratorioDTO, result),
 						display.getGrid());
 
@@ -206,7 +206,7 @@ public class LaboratoriosPresenter implements Presenter {
 			@Override
 			public void onFailure(Throwable caught) {
 
-				// EdiÁ„o do laboratÛrio n„o contendo a cidade
+				// Edi√ß√£o do laborat√≥rio n√£o contendo a cidade
 				Presenter presenter = new LaboratoriosFormPresenter(new LaboratoriosFormView(laboratorioDTO),
 						display.getGrid());
 

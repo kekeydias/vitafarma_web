@@ -38,7 +38,7 @@ public class ExportExcelServlet extends HttpServlet {
 	private String nomeLaboratorio = null;
 	private Double precoProduto = null;
 
-	// RelatÛrio de balanÁo do perÌodo
+	// Relat√≥rio de balan√ßo do per√≠odo
 	private Long codigoCliente = null;
 	private Long codigoFornecedor = null;
 	private Date dataInicio = null;
@@ -120,8 +120,8 @@ public class ExportExcelServlet extends HttpServlet {
 	}
 
 	private void carregaParametros(HttpServletRequest request) {
-		// Verifica se foi enviado o par‚metro
-		// de idVenda (RelatÛrio de ItensVenda)
+		// Verifica se foi enviado o par√¢metro
+		// de idVenda (Relat√≥rio de ItensVenda)
 		Long idVenda = null;
 		try {
 			idVenda = Long.parseLong(request.getParameter("idVenda"));
@@ -134,16 +134,16 @@ public class ExportExcelServlet extends HttpServlet {
 		}
 
 		// Verifica se deve-se gerar um novo cupom
-		// da venda, caso j· exista um cupom anterior
+		// da venda, caso j√° exista um cupom anterior
 		Boolean gerarNovoCupomVenda = (request.getParameter("gerarNovoCupomVenda") == null ? false
 				: Boolean.parseBoolean(request.getParameter("gerarNovoCupomVenda")));
 		this.gerarNovoCupomVenda = gerarNovoCupomVenda;
 
-		// Verifica se foi enviado o par‚metro de NomeFornecedor
+		// Verifica se foi enviado o par√¢metro de NomeFornecedor
 		this.nomeFornecedor = (request.getParameter("nomeFornecedor") == null ? null
 				: request.getParameter("nomeFornecedor").toString());
 
-		// Verifica se foi enviado o par‚metro de CodigoProduto
+		// Verifica se foi enviado o par√¢metro de CodigoProduto
 		if (request.getParameter("codigoProduto") != null) {
 			try {
 				this.codigoProduto = Long.parseLong(request.getParameter("codigoProduto").toString());
@@ -152,7 +152,7 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro de CodigoCliente
+		// Verifica se foi enviado o par√¢metro de CodigoCliente
 		if (request.getParameter("codigoCliente") != null) {
 			try {
 				this.codigoCliente = Long.parseLong(request.getParameter("codigoCliente").toString());
@@ -161,7 +161,7 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro de CodigoFornecedor
+		// Verifica se foi enviado o par√¢metro de CodigoFornecedor
 		if (request.getParameter("codigoFornecedor") != null) {
 			try {
 				this.codigoFornecedor = Long.parseLong(request.getParameter("codigoFornecedor").toString());
@@ -170,15 +170,15 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro de NomeProduto
+		// Verifica se foi enviado o par√¢metro de NomeProduto
 		this.nomeProduto = (request.getParameter("nomeProduto") == null ? null
 				: request.getParameter("nomeProduto").toString());
 
-		// Verifica se foi enviado o par‚metro de NomeLaboratorio
+		// Verifica se foi enviado o par√¢metro de NomeLaboratorio
 		this.nomeLaboratorio = (request.getParameter("nomeLaboratorio") == null ? null
 				: request.getParameter("nomeLaboratorio").toString());
 
-		// Verifica se foi enviado o par‚metro de PrecoProduto
+		// Verifica se foi enviado o par√¢metro de PrecoProduto
 		if (request.getParameter("precoProduto") != null) {
 			try {
 				this.precoProduto = Double.parseDouble(request.getParameter("precoProduto").toString());
@@ -187,8 +187,8 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro
-		// de DataEntrada (RelatÛrio de EntradaProdutos)
+		// Verifica se foi enviado o par√¢metro
+		// de DataEntrada (Relat√≥rio de EntradaProdutos)
 		if (request.getParameter("dataEntrada") != null) {
 			try {
 				long timeEntrada = Long.parseLong(request.getParameter("dataEntrada").toString());
@@ -198,8 +198,8 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro
-		// de DataInicio (RelatÛrio de Balanco do Periodo)
+		// Verifica se foi enviado o par√¢metro
+		// de DataInicio (Relat√≥rio de Balanco do Periodo)
 		if (request.getParameter("dataInicio") != null) {
 			try {
 				long timeInicio = Long.parseLong(request.getParameter("dataInicio").toString());
@@ -209,8 +209,8 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro
-		// de DataFim (RelatÛrio de Balanco do Periodo)
+		// Verifica se foi enviado o par√¢metro
+		// de DataFim (Relat√≥rio de Balanco do Periodo)
 		if (request.getParameter("dataFim") != null) {
 			try {
 				long timeFim = Long.parseLong(request.getParameter("dataFim").toString());
@@ -220,12 +220,12 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro
-		// de codigoNotaFiscal (RelatÛrio de EntradaProdutos)
+		// Verifica se foi enviado o par√¢metro
+		// de codigoNotaFiscal (Relat√≥rio de EntradaProdutos)
 		this.codigoNotaFiscal = (request.getParameter("codigoNotaFiscal") == null ? null
 				: request.getParameter("codigoNotaFiscal").toString());
 
-		// Verifica se foi enviado o par‚metro de PrecoProduto
+		// Verifica se foi enviado o par√¢metro de PrecoProduto
 		if (request.getParameter("medAbc") != null) {
 			try {
 				this.medAbc = Long.parseLong(request.getParameter("medAbc").toString());
@@ -234,7 +234,7 @@ public class ExportExcelServlet extends HttpServlet {
 			}
 		}
 
-		// Verifica se foi enviado o par‚metro de idEntradaGroup
+		// Verifica se foi enviado o par√¢metro de idEntradaGroup
 		if (request.getParameter("idEntradaGroup") != null) {
 			try {
 				Long id = Long.parseLong(request.getParameter("idEntradaGroup").toString());

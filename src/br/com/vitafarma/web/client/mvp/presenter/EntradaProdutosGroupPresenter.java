@@ -231,7 +231,7 @@ public class EntradaProdutosGroupPresenter implements Presenter {
 						NotaFiscalDTO notaFiscalDTO = result.getPrimeiro();
 						FornecedorDTO fornecedorDTO = result.getSegundo();
 
-						// EdiÁ„o de entrada de produto contendo produto e
+						// Edi√ß√£o de entrada de produto contendo produto e
 						// fornecedor
 						Presenter presenter = new EntradaProdutosGroupFormPresenter(
 								new EntradaProdutosGroupFormView(entradaProdutoGroupDTO, fornecedorDTO, notaFiscalDTO),
@@ -243,7 +243,7 @@ public class EntradaProdutosGroupPresenter implements Presenter {
 					@Override
 					public void onFailure(Throwable caught) {
 
-						// EdiÁ„o de entrada de produto n„o contendo produto e
+						// Edi√ß√£o de entrada de produto n√£o contendo produto e
 						// fornecedor
 						Presenter presenter = new EntradaProdutosGroupFormPresenter(
 								new EntradaProdutosGroupFormView(entradaProdutoGroupDTO), display.getGrid());

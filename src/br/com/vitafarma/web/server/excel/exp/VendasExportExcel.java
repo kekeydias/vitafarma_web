@@ -91,7 +91,7 @@ public class VendasExportExcel extends AbstractExportExcel {
 	}
 
 	private int writeData(Venda venda, int row, HSSFSheet sheet) {
-		// Código da venda
+		// CÃ³digo da venda
 		this.setCell(row, 2, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				venda.getId());

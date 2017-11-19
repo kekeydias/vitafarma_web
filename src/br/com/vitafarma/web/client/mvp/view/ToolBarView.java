@@ -75,7 +75,7 @@ public class ToolBarView extends MyComposite implements ToolBarPresenter.Display
 	private Button entradaProdutosNovoProdutoBt = null;
 	private Button entradaProdutosListProdutosBt = null;
 
-	// Relatórios
+	// RelatÃ³rios
 	private Button relatorioBalancoPeriodoBt = null;
 	private Button exportExcelCenarioBt = null;
 

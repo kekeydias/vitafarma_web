@@ -21,7 +21,7 @@ public class ExportExcelParameters {
 	private String nomeLaboratorio;
 	private Double precoProduto;
 
-	// Relatório de balanço do período
+	// RelatÃ³rio de balanÃ§o do perÃ­odo
 	private Long codigoCliente = null;
 	private Long codigoFornecedor = null;
 	private Date dataInicio = null;

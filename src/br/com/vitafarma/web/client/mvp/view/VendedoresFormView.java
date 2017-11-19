@@ -98,7 +98,7 @@ public class VendedoresFormView extends MyComposite implements
 		this.cpfTF.setEmptyText("Preencha o cpf");
 		geralFS.add(this.cpfTF, formData);
 
-		// Sal·rio
+		// Sal√°rio
 		this.salarioNF = new NumberField();
 		this.salarioNF.setName(VendedorDTO.PROPERTY_VENDEDOR_SALARIO_VALUE);
 		this.salarioNF.setValue(this.vendedorDTO.getSalarioValue());
@@ -109,7 +109,7 @@ public class VendedoresFormView extends MyComposite implements
 		this.salarioNF.setEmptyText("Preencha o salario");
 		geralFS.add(this.salarioNF, formData);
 
-		// Data de Adimiss„o
+		// Data de Adimiss√£o
 		this.dataAdimissaoTF = new DateField();
 		this.dataAdimissaoTF
 				.setName(VendedorDTO.PROPERTY_VENDEDOR_DATA_ADIMISSAO);
@@ -121,7 +121,7 @@ public class VendedoresFormView extends MyComposite implements
 		this.dataAdimissaoTF.setEmptyText("Preencha a data de adimissao");
 		geralFS.add(this.dataAdimissaoTF, formData);
 
-		// Data de Demiss„o
+		// Data de Demiss√£o
 		this.dataDemissaoTF = new DateField();
 		this.dataDemissaoTF
 				.setName(VendedorDTO.PROPERTY_VENDEDOR_DATA_DEMISSAO);
@@ -142,7 +142,7 @@ public class VendedoresFormView extends MyComposite implements
 		this.telefoneTF.setEmptyText("Preencha o telefone");
 		geralFS.add(this.telefoneTF, formData);
 
-		// EndereÁo
+		// Endere√ßo
 		this.enderecoTF = new TextField<String>();
 		this.enderecoTF.setName(VendedorDTO.PROPERTY_VENDEDOR_ENDERECO);
 		this.enderecoTF.setValue(this.vendedorDTO.getEndereco());

@@ -103,7 +103,7 @@ public class ProdutosFormView extends MyComposite implements
 		this.descricaoTF.setEmptyText("Preencha a descricao");
 		geralFS.add(this.descricaoTF, formData);
 
-		// Laboratório
+		// LaboratÃ³rio
 		this.laboratoriosCB = new LaboratoriosComboBox();
 		this.laboratoriosCB.setName(LaboratorioDTO.PROPERTY_LABORATORIO_NOME);
 		this.laboratoriosCB

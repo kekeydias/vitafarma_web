@@ -80,7 +80,7 @@ public class EntradaProdutosItensFormView extends MyComposite implements
 		this.produtosComboBox.setEmptyText("Selecione o produto");
 		geralFS.add(this.produtosComboBox, formData);
 
-		// PreÁo Unit·rio
+		// Pre√ßo Unit√°rio
 		this.precoUnitarioTF = new NumberField();
 		this.precoUnitarioTF
 				.setName(EntradaProdutoDTO.PROPERTY_ENTRADA_PRODUTO_PRECO_UNITARIO_VALUE);

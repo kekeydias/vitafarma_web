@@ -99,19 +99,19 @@ public class ProdutosExportExcel extends AbstractExportExcel {
 	}
 
 	private int writeData(Produto produto, int row, HSSFSheet sheet) {
-		// Código ABCFARMA
+		// CÃ³digo ABCFARMA
 		this.setCell(row, 2, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], produto.getMedAbc());
 
-		// Código do Produto
+		// CÃ³digo do Produto
 		this.setCell(row, 3, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], produto.getId());
 
 		// Nome do Produto
 		this.setCell(row, 4, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], produto.getNome());
 
-		// Descrição do Produto
+		// DescriÃ§Ã£o do Produto
 		this.setCell(row, 5, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], produto.getDescricao());
 
-		// Preço de Venda do Produto
+		// PreÃ§o de Venda do Produto
 		this.setCell(row, 6, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				VitafarmaUtil.formatCurrencyValueString(produto.getPreco()));
 

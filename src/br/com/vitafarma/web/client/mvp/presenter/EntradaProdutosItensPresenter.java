@@ -154,7 +154,7 @@ public class EntradaProdutosItensPresenter implements Presenter {
 
 			@Override
 			public void onSuccess(ProdutoDTO result) {
-				// EdiÁ„o do item contendo o produto
+				// Edi√ß√£o do item contendo o produto
 				Presenter presenter = new EntradaProdutosItensFormPresenter(new EntradaProdutosItensFormView(
 						display.getEntradaProdutoGroupDTO(), entradaProdutoDTO, result), display.getGrid());
 
@@ -163,7 +163,7 @@ public class EntradaProdutosItensPresenter implements Presenter {
 
 			@Override
 			public void onFailure(Throwable caught) {
-				// EdiÁ„o do item n„o contendo o produto
+				// Edi√ß√£o do item n√£o contendo o produto
 				Presenter presenter = new EntradaProdutosItensFormPresenter(
 						new EntradaProdutosItensFormView(display.getEntradaProdutoGroupDTO(), entradaProdutoDTO),
 						display.getGrid());

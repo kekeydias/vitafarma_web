@@ -171,7 +171,7 @@ public class CidadesPresenter implements Presenter {
 		service.getEstadoDTO(cidadeDTO.getEstadoId(), new AsyncCallback<EstadoDTO>() {
 			@Override
 			public void onSuccess(EstadoDTO result) {
-				// EdiÁ„o da cidade contendo o estado
+				// Edi√ß√£o da cidade contendo o estado
 				Presenter presenter = new CidadesFormPresenter(new CidadesFormView(cidadeDTO, result),
 						display.getGrid());
 
@@ -180,7 +180,7 @@ public class CidadesPresenter implements Presenter {
 
 			@Override
 			public void onFailure(Throwable caught) {
-				// EdiÁ„o da cidade N√O contendo o estado
+				// Edi√ß√£o da cidade N√ÉO contendo o estado
 				Presenter presenter = new CidadesFormPresenter(new CidadesFormView(cidadeDTO), display.getGrid());
 
 				presenter.go(null);

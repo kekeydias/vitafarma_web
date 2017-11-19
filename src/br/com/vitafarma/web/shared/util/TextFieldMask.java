@@ -10,7 +10,6 @@ import com.google.gwt.event.dom.client.KeyCodes;
 
 import com.google.gwt.user.client.Element;
 
-@SuppressWarnings("deprecation")
 public class TextFieldMask extends TextField<String> {
 	private final String mask;
 	private int len;

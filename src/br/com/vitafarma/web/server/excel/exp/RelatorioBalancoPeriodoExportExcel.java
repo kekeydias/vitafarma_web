@@ -80,11 +80,11 @@ public class RelatorioBalancoPeriodoExportExcel extends AbstractExportExcel {
 		Date dataInicio = this.getParametros().getDataInicio();
 		Date dataFim = this.getParametros().getDataFim();
 
-		// Quando esse relatÛrio È gerada a partir da funÁ„o 'Exportar Cen·rio',
+		// Quando esse relat√≥rio √© gerada a partir da fun√ß√£o 'Exportar Cen√°rio',
 		// pela classe VitafarmaExportExcel, deve-se exportar todos os registros
-		// existentes na base de dados, desconsiderando o perÌodo
+		// existentes na base de dados, desconsiderando o per√≠odo
 		// --> Quando o atributo 'removeUnusedSheets' vale 'true', temos que
-		// --> o relatÛrio est· sendo gerado partir da exportaÁ„o de cen·rio
+		// --> o relat√≥rio est√° sendo gerado partir da exporta√ß√£o de cen√°rio
 		if (this.removeUnusedSheets && (dataInicio == null || dataFim == null)) {
 			return false;
 		}
@@ -136,7 +136,7 @@ public class RelatorioBalancoPeriodoExportExcel extends AbstractExportExcel {
 			periodoStr = ("Todas as atividades do cenario");
 		}
 
-		// PerÌodo de referÍncia do relatÛrio
+		// Per√≠odo de refer√™ncia do relat√≥rio
 		this.setCell(3, 3, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], periodoStr);
 		this.setCellFontBoldCentered(3, 3, sheet);
 	}
@@ -144,7 +144,7 @@ public class RelatorioBalancoPeriodoExportExcel extends AbstractExportExcel {
 	private int writeData(RelatorioBalancoDTO relatorio, int row, HSSFSheet sheet) {
 		int col = 2;
 
-		// OperaÁ„o
+		// Opera√ß√£o
 		this.setCell(row, col++, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				relatorio.getOperacao());
 

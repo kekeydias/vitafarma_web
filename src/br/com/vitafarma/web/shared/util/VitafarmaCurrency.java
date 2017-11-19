@@ -44,7 +44,7 @@ public class VitafarmaCurrency implements IsSerializable {
 		Integer resto = (longValue % 100);
 		String str1 = (resto == 0 ? "00" : ((resto >= 10) ? resto.toString() : "0" + resto.toString()));
 
-		// Parte inteira do número
+		// Parte inteira do nÃºmero
 		longValue = this.value.intValue();
 		String str2 = longValue.toString();
 

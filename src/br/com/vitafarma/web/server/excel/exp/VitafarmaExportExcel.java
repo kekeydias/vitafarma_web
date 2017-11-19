@@ -56,7 +56,7 @@ public class VitafarmaExportExcel extends AbstractExportExcel {
 
 		try {
 			for (IExportExcel exporter : exporters) {
-				// Armazena a aba que est· sendo inserida na planilha
+				// Armazena a aba que est√° sendo inserida na planilha
 				exportersNames.add(exporter.getFileName());
 				exporter.export(workbook);
 			}
@@ -75,8 +75,8 @@ public class VitafarmaExportExcel extends AbstractExportExcel {
 		} else {
 			logger.info("Exportacao de cenario realizada com sucesso.");
 
-			// Procura pelas abas da planilha que n„o ser„o exibidas
-			// no relatÛrio (exemplo: PALETA_CORES)
+			// Procura pelas abas da planilha que n√£o ser√£o exibidas
+			// no relat√≥rio (exemplo: PALETA_CORES)
 			List<String> removeSheetsNames = new ArrayList<String>();
 
 			for (int i = 0; i < workbook.getNumberOfSheets(); i++) {
@@ -86,7 +86,7 @@ public class VitafarmaExportExcel extends AbstractExportExcel {
 				}
 			}
 
-			// Remove as abas desnecess·rias
+			// Remove as abas desnecess√°rias
 			while (!removeSheetsNames.isEmpty()) {
 				String name = removeSheetsNames.get(0);
 				int index = workbook.getSheetIndex(name);

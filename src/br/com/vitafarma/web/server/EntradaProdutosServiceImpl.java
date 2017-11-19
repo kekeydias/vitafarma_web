@@ -41,7 +41,7 @@ public class EntradaProdutosServiceImpl extends VitafarmaRemoteService implement
 
 			Double quantidadeAntes = 0.0, quantidadeDepois = 0.0;
 
-			// Quantidade antes da inclus„o (Item)
+			// Quantidade antes da inclus√£o (Item)
 			quantidadeAntes = this.searchQuantidadeItemEntradaProduto(entradaProdutoDTO.getId());
 
 			// Produto (Item)
@@ -65,7 +65,7 @@ public class EntradaProdutosServiceImpl extends VitafarmaRemoteService implement
 
 			entradaProduto.save();
 
-			// Quantidade apÛs da inclus„o (Item)
+			// Quantidade ap√≥s da inclus√£o (Item)
 			quantidadeDepois = entradaProduto.getQuantidade();
 
 			// Atualiza o estoque do produto
@@ -144,7 +144,7 @@ public class EntradaProdutosServiceImpl extends VitafarmaRemoteService implement
 			// Remover o item de entrada
 			entradaProduto.remove();
 
-			// Atualizar estoque do produto correspondente ‡ entrada
+			// Atualizar estoque do produto correspondente √† entrada
 			this.updateEstoqueProduto(entradaProduto.getProduto(), entradaProduto.getQuantidade(), 0.0);
 		}
 	}
@@ -313,8 +313,8 @@ public class EntradaProdutosServiceImpl extends VitafarmaRemoteService implement
 		try {
 			Fornecedor fornecedor = Fornecedor.find(entradaProdutoGroupDTO.getFornecedorId());
 
-			// Verifica-se se j· existe uma nota fiscal com o cÛdigo
-			// informado. Caso n„o exista, cria-se uma nova nota fiscal
+			// Verifica-se se j√° existe uma nota fiscal com o c√≥digo
+			// informado. Caso n√£o exista, cria-se uma nova nota fiscal
 			NotaFiscal notaFiscal = NotaFiscal
 					.findByCodigoNotaFiscalExactly(entradaProdutoGroupDTO.getNotaFiscalCodigo());
 

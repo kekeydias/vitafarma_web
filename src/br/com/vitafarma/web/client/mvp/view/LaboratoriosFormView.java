@@ -131,7 +131,7 @@ public class LaboratoriosFormView extends MyComposite implements
 		this.telefoneTF.setEmptyText("Preencha o telefone");
 		geralFS.add(this.telefoneTF, formData);
 
-		// Endereço
+		// EndereÃ§o
 		this.enderecoTF = new TextField<String>();
 		this.enderecoTF.setName(LaboratorioDTO.PROPERTY_LABORATORIO_ENDERECO);
 		this.enderecoTF.setValue(this.laboratorioDTO.getEndereco());

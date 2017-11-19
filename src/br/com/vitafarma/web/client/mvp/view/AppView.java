@@ -56,7 +56,7 @@ public class AppView extends MyComposite implements AppPresenter.Display {
 	}
 
 	private void createWest() {
-		// FIXME -- Aba de cen·rio
+		// FIXME -- Aba de cen√°rio
 		// BorderLayoutData bld = new BorderLayoutData(LayoutRegion.WEST);
 		// bld.setMargins(new Margins(5, 0, 5, 5));
 		// bld.setCollapsible(true);
@@ -80,7 +80,7 @@ public class AppView extends MyComposite implements AppPresenter.Display {
 		b.addSelectionListener(new SelectionListener<ButtonEvent>() {
 			@Override
 			public void componentSelected(ButtonEvent ce) {
-				// FIXME -- Logout da sess„o
+				// FIXME -- Logout da sess√£o
 				// Window.open("../resources/j_spring_security_logout"
 				// + VitafarmaUtil.paramsDebug(), "_self", "");
 				return;

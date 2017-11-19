@@ -139,12 +139,12 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 		this.setCell(row, column, sheet, nomeEmpresa);
 		this.setCellFontBoldCentered(row, column, sheet);
 
-		// Endereço da Emrpesa - Primeira Linha
+		// EndereÃ§o da Emrpesa - Primeira Linha
 		row++;
 		this.setCell(row, column, sheet, endereco1);
 		this.setCellAlignment(row, column, sheet, HSSFCellStyle.ALIGN_CENTER);
 
-		// Endereço da Emrpesa - Segunda Linha
+		// EndereÃ§o da Emrpesa - Segunda Linha
 		row++;
 		this.setCell(row, column, sheet, endereco2);
 		this.setCellAlignment(row, column, sheet, HSSFCellStyle.ALIGN_CENTER);
@@ -153,15 +153,15 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], cnpjEmpresa);
 
-		// Inscrição Estadual
+		// InscriÃ§Ã£o Estadual
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], inscEstadual);
 
-		// Inscrição Municipal
+		// InscriÃ§Ã£o Municipal
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], inscMunicipal);
 
-		// Data/Hora, Código do Cupom, COO
+		// Data/Hora, CÃ³digo do Cupom, COO
 		row += 2;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], dataHoraCodigoCupom);
 
@@ -173,7 +173,7 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], nomeCliente);
 
-		// Endereço do Cliente
+		// EndereÃ§o do Cliente
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], enderecoCliente);
 
@@ -185,7 +185,7 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 			String linhaItemCodigoDescricao = CupomFiscalData.montaItemCodigoDescricao(i + 1, itemVenda);
 			String linhaQtdUnVlunitVlitem = CupomFiscalData.montaQtdUnValorUnitarioValorItem(i + 1, itemVenda);
 
-			// ITEM - CÓDIGO - DESCRIÇÃO
+			// ITEM - CÃ“DIGO - DESCRIÃ‡ÃƒO
 			this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 					linhaItemCodigoDescricao);
 
@@ -198,7 +198,7 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 			row++;
 		}
 
-		// Linha em branco (entre o último item da venda e a linha do subtotal)
+		// Linha em branco (entre o Ãºltimo item da venda e a linha do subtotal)
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], "");
 
 		// Subtotal da Venda
@@ -212,7 +212,7 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 
 		String separator = "------------------------------------------------------------------------------------------";
 
-		// Adiciona separador de seção
+		// Adiciona separador de seÃ§Ã£o
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], separator);
 
@@ -221,16 +221,16 @@ public class CupomFiscalExportExcel extends AbstractExportExcel {
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], totalVenda);
 		this.setCellFontBold(row, column, sheet);
 
-		// Adiciona separador de seção
+		// Adiciona separador de seÃ§Ã£o
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], separator);
 
-		// Versão do Sistema, Caixa, Loja e Operador
+		// VersÃ£o do Sistema, Caixa, Loja e Operador
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				versaoCaixaLojaOperador);
 
-		// Adiciona separador de seção
+		// Adiciona separador de seÃ§Ã£o
 		row++;
 		this.setCell(row, column, sheet, this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()], separator);
 	}

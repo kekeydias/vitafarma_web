@@ -154,7 +154,7 @@ public class VendaClientePresenter implements Presenter {
 			@Override
 			public void onSuccess(ProdutoDTO result) {
 
-				// EdiÁ„o do item contendo o produto
+				// Edi√ß√£o do item contendo o produto
 				Presenter presenter = new ItemVendaFormPresenter(
 						new ItemVendaFormView(itemVendaDTO, result, display.getVendaDTO()), display.getGrid());
 
@@ -164,7 +164,7 @@ public class VendaClientePresenter implements Presenter {
 			@Override
 			public void onFailure(Throwable caught) {
 
-				// EdiÁ„o do item n„o contendo o produto
+				// Edi√ß√£o do item n√£o contendo o produto
 				Presenter presenter = new ItemVendaFormPresenter(
 						new ItemVendaFormView(itemVendaDTO, display.getVendaDTO()), display.getGrid());
 

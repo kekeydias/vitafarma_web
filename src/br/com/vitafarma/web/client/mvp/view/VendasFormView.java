@@ -94,7 +94,7 @@ public class VendasFormView extends MyComposite implements
 		this.dataVendaTF.setEmptyText("Selecione a data da venda");
 		geralFS.add(this.dataVendaTF, formData);
 
-		// Hor·rio da venda
+		// Hor√°rio da venda
 		Date dataVenda = (this.vendaDTO.getVendaDataValue() == null ? new Date()
 				: this.vendaDTO.getVendaDataValue());
 

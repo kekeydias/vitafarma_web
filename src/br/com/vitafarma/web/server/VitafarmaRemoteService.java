@@ -16,7 +16,7 @@ public class VitafarmaRemoteService extends RemoteServiceServlet {
 		// String username = context.getAuthentication().getName();
 		// return Usuario.find( username );
 
-		// FIXME -- Informar usu·rio atual
+		// FIXME -- Informar usu√°rio atual
 		return Usuario.findAll().get(0);
 	}
 

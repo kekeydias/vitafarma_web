@@ -75,7 +75,7 @@ public class FuncionariosFormView extends MyComposite implements
 		geralFS.setLayout(formLayout);
 		geralFS.setHeading(this.getI18nConstants().informacoesGerais());
 
-		// Nome do funcionário
+		// Nome do funcionÃ¡rio
 		this.nomeTF = new TextField<String>();
 		this.nomeTF.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_NOME);
 		this.nomeTF.setValue(this.funcionarioDTO.getNome());
@@ -86,7 +86,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.nomeTF.setEmptyText("Preencha o nome");
 		geralFS.add(this.nomeTF, formData);
 
-		// Cpf do funcionário
+		// Cpf do funcionÃ¡rio
 		this.cpfTF = new UniqueSizedNumberField(this, 11, 11,
 				UniqueDomain.FUNCIONARIO, this.getI18nMessages()
 						.errorDuplicatedCpfFuncionario());
@@ -99,7 +99,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.cpfTF.setEmptyText("Preencha o cpf");
 		geralFS.add(this.cpfTF, formData);
 
-		// Salário do funcionário
+		// SalÃ¡rio do funcionÃ¡rio
 		this.salarioNF = new NumberField();
 		this.salarioNF
 				.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_SALARIO_VALUE);
@@ -111,7 +111,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.salarioNF.setEmptyText("Preencha o salario");
 		geralFS.add(this.salarioNF, formData);
 
-		// Data de admissão do funcionário
+		// Data de admissÃ£o do funcionÃ¡rio
 		this.dataAdimissaoTF = new DateField();
 		this.dataAdimissaoTF
 				.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_DATA_ADIMISSAO);
@@ -123,7 +123,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.dataAdimissaoTF.setEmptyText("Preencha a data de adimissao");
 		geralFS.add(this.dataAdimissaoTF, formData);
 
-		// Data de demissão do funcionário
+		// Data de demissÃ£o do funcionÃ¡rio
 		this.dataDemissaoTF = new DateField();
 		this.dataDemissaoTF
 				.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_DATA_DEMISSAO);
@@ -135,7 +135,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.dataDemissaoTF.setEmptyText("Preencha a data de demissao");
 		geralFS.add(this.dataDemissaoTF, formData);
 
-		// Telefone do funcionário
+		// Telefone do funcionÃ¡rio
 		this.telefoneTF = new NumberField();
 		this.telefoneTF.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_TELEFONE);
 		this.telefoneTF.setValue(this.funcionarioDTO.getTelefone());
@@ -144,7 +144,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.telefoneTF.setEmptyText("Preencha o telefone");
 		geralFS.add(this.telefoneTF, formData);
 
-		// Endereço do funcionário
+		// EndereÃ§o do funcionÃ¡rio
 		this.enderecoTF = new TextField<String>();
 		this.enderecoTF.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_ENDERECO);
 		this.enderecoTF.setValue(this.funcionarioDTO.getEndereco());
@@ -162,7 +162,7 @@ public class FuncionariosFormView extends MyComposite implements
 		this.cidadesCB.setEmptyText("Selecione a cidade");
 		geralFS.add(this.cidadesCB, formData);
 
-		// Email do funcionário
+		// Email do funcionÃ¡rio
 		this.emailTF = new TextField<String>();
 		this.emailTF.setName(FuncionarioDTO.PROPERTY_FUNCIONARIO_EMAIL);
 		this.emailTF.setValue(this.funcionarioDTO.getEmail());

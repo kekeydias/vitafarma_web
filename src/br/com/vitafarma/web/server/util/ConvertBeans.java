@@ -408,7 +408,7 @@ public class ConvertBeans {
 		dto.setSubtotalValue(subtotal.getDoubleValue());
 		dto.setSubtotalString(subtotal.toString());
 
-		// Calcula o preÁo final da venda, aplicando o desconto
+		// Calcula o pre√ßo final da venda, aplicando o desconto
 		// da venda no subtotal (preco final dos itens)
 		VitafarmaCurrency precoFinalVenda = new VitafarmaCurrency(VitafarmaUtil.getValorTotalItens(itensVenda));
 		dto.setValorFinalValue(precoFinalVenda.getDoubleValue());
@@ -502,7 +502,7 @@ public class ConvertBeans {
 		dto.setDescontoValue(desconto.getDoubleValue());
 		dto.setDescontoString(desconto.toString());
 
-		// PreÁo final do item, j· considerado o desconto
+		// Pre√ßo final do item, j√° considerado o desconto
 		VitafarmaCurrency precoFinal = new VitafarmaCurrency(domain.getPrecoFinal());
 		dto.setPrecoFinalValue(precoFinal.getDoubleValue());
 		dto.setPrecoFinalString(precoFinal.toString());
@@ -590,7 +590,7 @@ public class ConvertBeans {
 		dto.setQuantidadeValue(quantidade.getDoubleValue());
 		dto.setQuantidadeString(quantidade.toString());
 
-		// PreÁo Unit·rio
+		// Pre√ßo Unit√°rio
 		VitafarmaCurrency precoUnitario = new VitafarmaCurrency(domain.getPrecoUnitario());
 		dto.setPrecoUnitarioValue(precoUnitario.getDoubleValue());
 		dto.setPrecoUnitarioString(precoUnitario.toString());

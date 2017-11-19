@@ -196,7 +196,7 @@ public class FornecedoresPresenter implements Presenter {
 			@Override
 			public void onSuccess(CidadeDTO result) {
 
-				// EdiÁ„o do fornecedor contendo a cidade
+				// Edi√ß√£o do fornecedor contendo a cidade
 				Presenter presenter = new FornecedoresFormPresenter(new FornecedoresFormView(fornecedorDTO, result),
 						display.getGrid());
 
@@ -206,7 +206,7 @@ public class FornecedoresPresenter implements Presenter {
 			@Override
 			public void onFailure(Throwable caught) {
 
-				// EdiÁ„o do fornecedor n„o contendo a cidade
+				// Edi√ß√£o do fornecedor n√£o contendo a cidade
 				Presenter presenter = new FornecedoresFormPresenter(new FornecedoresFormView(fornecedorDTO),
 						display.getGrid());
 

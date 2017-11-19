@@ -100,14 +100,14 @@ public class VendedoresExportExcel extends AbstractExportExcel {
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				VitafarmaUtil.parseCpfToString(vendedor.getCpf()));
 
-		// Data de Adimiss„o
+		// Data de Adimiss√£o
 		VitafarmaDate dataAdimissao = new VitafarmaDate(vendedor
 				.getDataAdimissao().getTime());
 		this.setCell(row, 4, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				dataAdimissao.toString());
 
-		// Data de Demiss„o
+		// Data de Demiss√£o
 		String dataDemissaoStr = "";
 		if (vendedor.getDataDemissao() != null) {
 			VitafarmaDate dataDemissao = new VitafarmaDate(vendedor
@@ -119,7 +119,7 @@ public class VendedoresExportExcel extends AbstractExportExcel {
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				dataDemissaoStr);
 
-		// Sal·rio
+		// Sal√°rio
 		this.setCell(row, 6, sheet,
 				this.cellStyles[ExcelCellStyleReference.TEXT.ordinal()],
 				VitafarmaUtil.formatCurrencyValueString(vendedor.getSalario()));

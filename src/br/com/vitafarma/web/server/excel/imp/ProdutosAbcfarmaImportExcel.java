@@ -175,7 +175,7 @@ public class ProdutosAbcfarmaImportExcel extends AbstractImportExcel<ProdutosAbc
 
 	private boolean doSyntacticValidation(String sheetName, List<ProdutosAbcfarmaImportExcelBean> sheetContent) {
 		// Map utilizado para associar um erro
-		// ‡s linhas do arquivo onde o mesmo ocorre
+		// √†s linhas do arquivo onde o mesmo ocorre
 
 		// [ ImportExcelError -> Lista de linhas onde o erro ocorre ]
 		Map<ImportExcelError, List<Integer>> syntacticErrorsMap = new HashMap<ImportExcelError, List<Integer>>();
@@ -213,7 +213,7 @@ public class ProdutosAbcfarmaImportExcel extends AbstractImportExcel<ProdutosAbc
 	}
 
 	private void checkUniqueness(List<ProdutosAbcfarmaImportExcelBean> sheetContent) {
-		// Map com os cÛdigos dos produtos e as linhas
+		// Map com os c√≥digos dos produtos e as linhas
 		// em que o mesmo aparece no arquivo de entrada
 
 		// [ MedAbc -> Lista de Linhas do Arquivo de Entrada ]
@@ -241,15 +241,15 @@ public class ProdutosAbcfarmaImportExcel extends AbstractImportExcel<ProdutosAbc
 	}
 
 	private void updateDataBase(String sheetName, List<ProdutosAbcfarmaImportExcelBean> sheetContent) {
-		// Carrega os produtos que j· existem na base de dados
+		// Carrega os produtos que j√° existem na base de dados
 		Map<Long, Produto> produtosBDMap = Produto.buildMedAbcToProdutoAbcFarmaMap(Produto.findAll());
 
-		// Carrega os laboratÛrios que j· existem na base de dados
+		// Carrega os laborat√≥rios que j√° existem na base de dados
 		Map<Long, Laboratorio> laboratoriosBDMap = Laboratorio.buildNomeToLaboratorioMap(Laboratorio.findAll());
 
-		// Caso seja necess·rio criar um novo laboratÛrio,
+		// Caso seja necess√°rio criar um novo laborat√≥rio,
 		// deve-se informar uma cidade default, ou null caso
-		// n„o exista nenhuma cidade cadastrada na base de dados
+		// n√£o exista nenhuma cidade cadastrada na base de dados
 		Cidade cidade = null;
 		if (Cidade.count() != 0) {
 			List<Cidade> cidades = Cidade.findAll();
@@ -261,7 +261,7 @@ public class ProdutosAbcfarmaImportExcel extends AbstractImportExcel<ProdutosAbc
 
 			Laboratorio laboratorio = laboratoriosBDMap.get(produtoExcel.getMedLab());
 
-			// Salvando os dados do novo laboratÛrio
+			// Salvando os dados do novo laborat√≥rio
 			if (laboratorio == null && this.createNewEntities) {
 
 				laboratorio = new Laboratorio(null, produtoExcel.getMedLab(), produtoExcel.getLabNomStr(),
@@ -275,7 +275,7 @@ public class ProdutosAbcfarmaImportExcel extends AbstractImportExcel<ProdutosAbc
 				laboratoriosBDMap.put(produtoExcel.getMedLab(), laboratorio);
 			}
 
-			// Verificando se o produto j· existe na base de dados
+			// Verificando se o produto j√° existe na base de dados
 			if (produtoBD != null) {
 				// Update
 				produtoBD.setId(produtoExcel.getMedAbc());

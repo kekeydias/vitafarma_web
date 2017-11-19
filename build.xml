@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="vitafarma" default="all"
-	basedir="D:\Vitafarma\workspaces\VitafarmaWeb">
+<project name="vitafarma" default="all" basedir="D:\Vitafarma\workspaces\vitafarma_web">
 	<property name="gwt.home" value="D:/Vitafarma/gwt-2.5.0.rc1" />
 	<property name="gwt.module.id" value="br.com.vitafarma.web.Vitafarma" />
 	<property name="war.name" value="Vitafarma.war" />
@@ -13,24 +12,24 @@
 		description="Package up the module project and required projects as jars">
 		<mkdir dir="war/WEB-INF/lib" />
 
-		<!--=== VitafarmaWeb === -->
+		<!--=== vitafarma_web === -->
 		<jar destfile='war/WEB-INF/lib/VitafarmaWeb.jar'>
-			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/src">
+			<fileset dir="${vitafarma.workspace}/vitafarma_web/src">
 				<include name="**" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/test">
+			<fileset dir="${vitafarma.workspace}/vitafarma_web/test">
 				<include name="**" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/resources">
+			<fileset dir="${vitafarma.workspace}/vitafarma_web/resources">
 				<include name="**" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes">
+			<fileset dir="${vitafarma.workspace}/vitafarma_web/war/WEB-INF/classes">
 				<include name="**/*.class" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes">
+			<fileset dir="${vitafarma.workspace}/vitafarma_web/war/WEB-INF/classes">
 				<include name="**/*.class" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes">
+			<fileset dir="${vitafarma.workspace}/vitafarma_web/war/WEB-INF/classes">
 				<include name="**/*.class" />
 			</fileset>
 		</jar>
@@ -71,24 +70,24 @@
 			</fileset>
 		</copy>
 
-		<!--=== VitafarmaDomain === -->
+		<!--=== vitafarma_domain === -->
 		<jar destfile='war/WEB-INF/lib/VitafarmaDomain.jar'>
-			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/resources">
+			<fileset dir="${vitafarma.workspace}/vitafarma_domain/resources">
 				<include name="**" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/src">
+			<fileset dir="${vitafarma.workspace}/vitafarma_domain/src">
 				<include name="**" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/test">
+			<fileset dir="${vitafarma.workspace}/vitafarma_domain/test">
 				<include name="**" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/target/classes">
+			<fileset dir="${vitafarma.workspace}/vitafarma_domain/target/classes">
 				<include name="**/*.class" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/target/classes">
+			<fileset dir="${vitafarma.workspace}/vitafarma_domain/target/classes">
 				<include name="**/*.class" />
 			</fileset>
-			<fileset dir="${vitafarma.workspace}/VitafarmaDomain/target/classes">
+			<fileset dir="${vitafarma.workspace}/vitafarma_domain/target/classes">
 				<include name="**/*.class" />
 			</fileset>
 		</jar>
@@ -98,14 +97,13 @@
 		<java classname="com.google.gwt.dev.Compiler" fork="yes"
 			failonerror="true" maxmemory="1024m">
 			<classpath>
-				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/src" />
-				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/test" />
-				<pathelement location="${vitafarma.workspace}/VitafarmaWeb/resources" />
-				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/resources" />
-				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/src" />
-				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/test" />
-				<pathelement
-					location="${vitafarma.workspace}/VitafarmaWeb/war/WEB-INF/classes" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_web/src" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_web/test" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_web/resources" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_domain/resources" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_domain/src" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_domain/test" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_web/war/WEB-INF/classes" />
 
 				<pathelement location="${vitafarma.web}/gwt-async-future-1.0.2.jar" />
 				<pathelement location="${vitafarma.web}/gwt-2.2.5.jar" />
@@ -120,7 +118,7 @@
 				<pathelement location="${gwt.home}/validation-api-1.0.0.GA-sources.jar" />
 				<pathelement location="${gwt.home}/validation-api-1.0.0.GA.jar" />
 
-				<pathelement location="${vitafarma.workspace}/VitafarmaDomain/target/classes" />
+				<pathelement location="${vitafarma.workspace}/vitafarma_domain/target/classes" />
 
 				<pathelement location="${vitafarma.domain}/antlr-2.7.6.jar" />
 				<pathelement location="${vitafarma.domain}/c3p0-0.9.1.jar" />
@@ -153,7 +151,7 @@
 	</target>
 
 	<target name="deploy" depends="war">
-		<move file="${war.name}" todir="${vitafarma.workspace}/VitafarmaWeb/target" />
+		<move file="${war.name}" todir="${vitafarma.workspace}/vitafarma_web/target" />
 	</target>
 
 	<target name="all" depends="deploy" />

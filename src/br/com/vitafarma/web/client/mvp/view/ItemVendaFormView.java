@@ -83,7 +83,7 @@ public class ItemVendaFormView extends MyComposite implements
 		this.produtosComboBox.setEmptyText("Selecione o produto");
 		geralFS.add(this.produtosComboBox, formData);
 
-		// PreÁo Unitario
+		// Pre√ßo Unitario
 		this.precoUnitarioTF = new NumberField();
 		this.precoUnitarioTF
 				.setName(ItemVendaDTO.PROPERTY_ITEM_VENDA_PRECO_UNITARIO_VALUE);
@@ -115,7 +115,7 @@ public class ItemVendaFormView extends MyComposite implements
 		this.quantidadeTF.setEmptyText("Preencha a quantidade");
 		geralFS.add(this.quantidadeTF, formData);
 
-		// PreÁo Final
+		// Pre√ßo Final
 		this.precoFinalTF = new NumberField();
 		this.precoFinalTF
 				.setName(ItemVendaDTO.PROPERTY_ITEM_VENDA_PRECO_FINAL_VALUE);
@@ -135,7 +135,7 @@ public class ItemVendaFormView extends MyComposite implements
 	}
 
 	private void createChangeListeners() {
-		// Quando for alterado o produto, o preco de custo dever· ser atualizado
+		// Quando for alterado o produto, o preco de custo dever√° ser atualizado
 		// corretamente
 		this.produtosComboBox
 				.addSelectionChangedListener(new SelectionChangedListener<ProdutoDTO>() {
@@ -149,7 +149,7 @@ public class ItemVendaFormView extends MyComposite implements
 				});
 
 		// Quando a quantidade do item ou seu desconto forem
-		// alterados, devemos atualizar o preÁo final corretamente
+		// alterados, devemos atualizar o pre√ßo final corretamente
 		Listener<FieldEvent> listener = new Listener<FieldEvent>() {
 			public void handleEvent(FieldEvent be) {
 				Double precoUnitario = precoUnitarioTF.getValue() == null ? 0.0

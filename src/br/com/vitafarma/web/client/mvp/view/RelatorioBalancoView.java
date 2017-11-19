@@ -57,7 +57,7 @@ public class RelatorioBalancoView extends MyComposite implements RelatorioBalanc
 	}
 
 	private void createToolBar() {
-		// Exibe apenas o bot„o 'exportExcel'
+		// Exibe apenas o bot√£o 'exportExcel'
 		this.toolBar = new SimpleToolBar(false, false, false, false, true, this);
 
 		this.panel.setTopComponent(this.toolBar);

@@ -185,7 +185,7 @@ public class ClientesPresenter implements Presenter {
 			@Override
 			public void onSuccess(CidadeDTO result) {
 
-				// Edição do cliente contendo a cidade
+				// EdiÃ§Ã£o do cliente contendo a cidade
 				Presenter presenter = new ClientesFormPresenter(new ClientesFormView(clienteDTO, result),
 						display.getGrid());
 
@@ -195,7 +195,7 @@ public class ClientesPresenter implements Presenter {
 			@Override
 			public void onFailure(Throwable caught) {
 
-				// Edição do cliente não contendo a cidade
+				// EdiÃ§Ã£o do cliente nÃ£o contendo a cidade
 				Presenter presenter = new ClientesFormPresenter(new ClientesFormView(clienteDTO), display.getGrid());
 
 				presenter.go(null);

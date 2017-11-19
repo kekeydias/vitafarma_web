@@ -67,7 +67,7 @@ public class EntradaProdutosGroupView extends MyComposite implements
 
 		this.toolBar.add(new SeparatorToolItem());
 
-		// Bot„o de inclus„o de itens na venda
+		// Bot√£o de inclus√£o de itens na venda
 		this.incluirItensEntradaBT = this.toolBar.createButton(this
 				.getI18nConstants().incluirItensEntrada(), Resources.DEFAULTS
 				.incluirItemEntrada16());

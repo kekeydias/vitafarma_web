@@ -49,7 +49,7 @@ public class VendasServiceImpl extends VitafarmaRemoteService implements VendasS
 			Venda venda = new Venda(vendaDTO.getVendaId(), dataVenda, vendaDTO.getDescontoValue(), cliente, cenario,
 					cupomVenda);
 
-			// Verifica se os campos informados para essa venda s„o v·lidos
+			// Verifica se os campos informados para essa venda s√£o v√°lidos
 			if (!this.validadeVenda(venda)) {
 				return false;
 			}
@@ -114,7 +114,7 @@ public class VendasServiceImpl extends VitafarmaRemoteService implements VendasS
 			List<ItemVenda> itensVenda = ConvertBeans.toListItemVenda(itensVendaDTO);
 
 			// Verifica se os campos informados
-			// para esse da venda s„o v·lidos
+			// para esse da venda s√£o v√°lidos
 			if (!this.validadeItemVenda(itensVenda)) {
 				return false;
 			}

@@ -201,16 +201,16 @@ public class VendasPresenter implements Presenter {
 					return;
 				}
 
-				// Verifica se j· existe cupom Fiscal
+				// Verifica se j√° existe cupom Fiscal
 				final VendasServiceAsync service = Services.vendas();
 				service.emitiuCupomVenda(vendaDTO, new AsyncCallback<Boolean>() {
 					@Override
 					public void onSuccess(Boolean result) {
 						if (result) {
-							// Caso j· exista um cupom fiscal
+							// Caso j√° exista um cupom fiscal
 							// dessa
 							// venda, pergunta-se
-							// ao usu·rio se deseja gerar um
+							// ao usu√°rio se deseja gerar um
 							// cupom
 							// novo, excluindo o cupom antigo
 							MessageBox.confirm("Emitir Novo Cupom",
@@ -240,7 +240,7 @@ public class VendasPresenter implements Presenter {
 	}
 
 	private void gerarCupomVenda(VendaDTO vendaDTO, Boolean gerarNovoCupomVenda) {
-		// GeraÁ„o do cupom fiscal
+		// Gera√ß√£o do cupom fiscal
 		ExcelParametros parametros = new ExcelParametros(ExcelInformationType.CUPOM_FISCAL, ExcelOperation.EXPORT);
 
 		ExportExcelFormSubmit e = new ExportExcelFormSubmit(parametros, display.getI18nConstants(),
@@ -273,7 +273,7 @@ public class VendasPresenter implements Presenter {
 			@Override
 			public void onSuccess(ClienteDTO result) {
 
-				// EdiÁ„o do cliente contendo a cidade
+				// Edi√ß√£o do cliente contendo a cidade
 				Presenter presenter = new VendasFormPresenter(new VendasFormView(vendaDTO, result), display.getGrid());
 
 				presenter.go(null);
@@ -282,7 +282,7 @@ public class VendasPresenter implements Presenter {
 			@Override
 			public void onFailure(Throwable caught) {
 
-				// EdiÁ„o de venda n„o contendo o cliente
+				// Edi√ß√£o de venda n√£o contendo o cliente
 				Presenter presenter = new VendasFormPresenter(new VendasFormView(vendaDTO), display.getGrid());
 
 				presenter.go(null);
