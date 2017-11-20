@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<project name="vitafarma" default="all" basedir="${vitafarma.web.workspace}">
+<project name="vitafarma" default="all" basedir="../">
 	<property file="ant/build.properties" />
 
 	<target name="jars"
