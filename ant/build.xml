@@ -142,7 +142,7 @@
 	</target>
 
 	<target name="deploy" depends="war">
-		<move file="${war.name}" todir="${vitafarma.web.workspace}/distribution" />
+		<move file="${war.name}" todir="${deploy.dir}" />
 	</target>
 
 	<target name="all" depends="deploy" />
