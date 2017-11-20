@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="vitafarma" default="all" basedir="D:\Vitafarma\workspaces\vitafarma_web">
-	<property name="gwt.home" value="D:/Vitafarma/gwt-2.5.0.rc1" />
-	<property name="gwt.module.id" value="br.com.vitafarma.web.Vitafarma" />
-	<property name="war.name" value="Vitafarma.war" />
-	<property name="vitafarma.domain" value="D:/Vitafarma/bibliotecas/vitafarma-domain" />
-	<property name="vitafarma.web" value="D:/Vitafarma/bibliotecas/vitafarma-web" />
-	<property name="vitafarma.workspace" value="D:/Vitafarma/workspaces" />
-	<property name="vitafarma.lib" value="D:/Vitafarma/bibliotecas" />
+	<property file="ant/build.properties" />
 
 	<target name="jars"
 		description="Package up the module project and required projects as jars">
