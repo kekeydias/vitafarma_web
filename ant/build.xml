@@ -17,6 +17,7 @@
 			<fileset dir="${vitafarma.web.workspace}/resources">
 				<include name="**" />
 			</fileset>
+			<!-- 
 			<fileset dir="${vitafarma.web.workspace}/war/WEB-INF/classes">
 				<include name="**/*.class" />
 			</fileset>
@@ -26,6 +27,7 @@
 			<fileset dir="${vitafarma.web.workspace}/war/WEB-INF/classes">
 				<include name="**/*.class" />
 			</fileset>
+			-->
 		</jar>
 
 		<!--=== WEB-INF/lib === -->
@@ -97,7 +99,7 @@
 				<pathelement location="${vitafarma.domain.workspace}/resources" />
 				<pathelement location="${vitafarma.domain.workspace}/src" />
 				<pathelement location="${vitafarma.domain.workspace}/test" />
-				<pathelement location="${vitafarma.web.workspace}/war/WEB-INF/classes" />
+				<!-- <pathelement location="${vitafarma.web.workspace}/war/WEB-INF/classes" /> -->
 
 				<pathelement location="${vitafarma.web.lib}/gwt-async-future-1.0.2.jar" />
 				<pathelement location="${vitafarma.web.lib}/gwt-2.2.5.jar" />
