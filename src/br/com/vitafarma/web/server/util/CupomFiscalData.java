@@ -170,7 +170,7 @@ public class CupomFiscalData {
 			return "Subtotal: ---";
 		}
 
-		Double subTotal = VitafarmaUtil.getSubtotalItens(itensVenda);
+		Double subTotal = ConvertBeans.getSubtotalItens(itensVenda);
 
 		String result = " (R$) " + VitafarmaUtil.formatCurrencyValueString(subTotal);
 
@@ -187,8 +187,8 @@ public class CupomFiscalData {
 			return "Desconto: ---";
 		}
 
-		Double valorBruto = VitafarmaUtil.getSubtotalItens(itensVenda);
-		Double valorFinal = VitafarmaUtil.getValorTotalItens(itensVenda);
+		Double valorBruto = ConvertBeans.getSubtotalItens(itensVenda);
+		Double valorFinal = ConvertBeans.getValorTotalItens(itensVenda);
 		Double valorDesconto = (valorBruto - valorFinal);
 
 		String result = "(R$) " + VitafarmaUtil.formatCurrencyValueString(valorDesconto);
@@ -205,7 +205,7 @@ public class CupomFiscalData {
 			return "TOTAL: ---";
 		}
 
-		Double valorFinal = VitafarmaUtil.getValorTotalItens(itensVenda);
+		Double valorFinal = ConvertBeans.getValorTotalItens(itensVenda);
 
 		String result = "(R$) " + VitafarmaUtil.formatCurrencyValueString(valorFinal);
 		while (result.length() < 60) {

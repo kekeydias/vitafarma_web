@@ -10,8 +10,6 @@ import java.util.logging.Logger;
 import com.extjs.gxt.ui.client.widget.form.CheckBox;
 import com.google.gwt.user.client.Window.Location;
 
-import br.com.vitafarma.domain.ItemVenda;
-
 public class VitafarmaUtil implements java.io.Serializable {
 	private static final long serialVersionUID = 582528883163691473L;
 
@@ -291,34 +289,6 @@ public class VitafarmaUtil implements java.io.Serializable {
 		String timeStr = (hourStr + ":" + minuteStr + ":" + secondStr);
 
 		return (dateStr + " " + timeStr);
-	}
-
-	public static Double getValorTotalItens(List<ItemVenda> itensVenda) {
-		if (itensVenda == null) {
-			return 0.0;
-		}
-
-		Double total = 0.0;
-
-		for (ItemVenda itemVenda : itensVenda) {
-			total += itemVenda.getPrecoFinal();
-		}
-
-		return total;
-	}
-
-	public static Double getSubtotalItens(List<ItemVenda> itensVenda) {
-		if (itensVenda == null) {
-			return 0.0;
-		}
-
-		Double total = 0.0;
-
-		for (ItemVenda itemVenda : itensVenda) {
-			total += (itemVenda.getPrecoUnitario() * itemVenda.getQuantidade());
-		}
-
-		return total;
 	}
 
 	public static boolean validadeValorDesconto(Double value) {

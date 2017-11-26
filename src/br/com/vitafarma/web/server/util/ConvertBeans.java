@@ -404,13 +404,13 @@ public class ConvertBeans {
 		dto.setDescontoString(desconto.toString());
 
 		// Subtotal da venda
-		VitafarmaCurrency subtotal = new VitafarmaCurrency(VitafarmaUtil.getSubtotalItens(itensVenda));
+		VitafarmaCurrency subtotal = new VitafarmaCurrency(ConvertBeans.getSubtotalItens(itensVenda));
 		dto.setSubtotalValue(subtotal.getDoubleValue());
 		dto.setSubtotalString(subtotal.toString());
 
 		// Calcula o preço final da venda, aplicando o desconto
 		// da venda no subtotal (preco final dos itens)
-		VitafarmaCurrency precoFinalVenda = new VitafarmaCurrency(VitafarmaUtil.getValorTotalItens(itensVenda));
+		VitafarmaCurrency precoFinalVenda = new VitafarmaCurrency(ConvertBeans.getValorTotalItens(itensVenda));
 		dto.setValorFinalValue(precoFinalVenda.getDoubleValue());
 		dto.setValorFinalString(precoFinalVenda.toString());
 
@@ -1079,5 +1079,33 @@ public class ConvertBeans {
 		}
 
 		return listDTOs;
+	}
+
+	public static Double getValorTotalItens(List<ItemVenda> itensVenda) {
+		if (itensVenda == null) {
+			return 0.0;
+		}
+
+		Double total = 0.0;
+
+		for (ItemVenda itemVenda : itensVenda) {
+			total += itemVenda.getPrecoFinal();
+		}
+
+		return total;
+	}
+
+	public static Double getSubtotalItens(List<ItemVenda> itensVenda) {
+		if (itensVenda == null) {
+			return 0.0;
+		}
+
+		Double total = 0.0;
+
+		for (ItemVenda itemVenda : itensVenda) {
+			total += (itemVenda.getPrecoUnitario() * itemVenda.getQuantidade());
+		}
+
+		return total;
 	}
 }

@@ -22,6 +22,9 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
 				<configuration>
+					<compileSourcesArtifacts>
+						<compileSourcesArtifact>br.com.vitafarma.domain:vitafarma_domain</compileSourcesArtifact>
+					</compileSourcesArtifacts>
 					<excludes>
 						<exclude>**/br/com/vitafarma/web/client/**</exclude>
 						<exclude>**/br/com/vitafarma/web/server/**</exclude>
@@ -40,6 +43,9 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
 				<configuration>
+					<compileSourcesArtifacts>
+						<compileSourcesArtifact>br.com.vitafarma.domain:vitafarma_domain</compileSourcesArtifact>
+					</compileSourcesArtifacts>
 					<excludes>
 						<exclude>**/br/com/vitafarma/web/client/**</exclude>
 						<exclude>**/br/com/vitafarma/web/server/**</exclude>
@@ -49,7 +55,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
 				<configuration>
+					<compileSourcesArtifacts>
+						<compileSourcesArtifact>br.com.vitafarma.domain:vitafarma_domain</compileSourcesArtifact>
+					</compileSourcesArtifacts>
 					<excludes>
 						<exclude>**/br/com/vitafarma/web/client/**</exclude>
 						<exclude>**/br/com/vitafarma/web/server/**</exclude>

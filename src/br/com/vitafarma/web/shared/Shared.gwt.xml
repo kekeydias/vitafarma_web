@@ -7,4 +7,5 @@
 	<source path='' />
 	<source path='client' />
 	<source path='server' />
+	<source path='domain' />
 </module>

@@ -13,6 +13,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+		</dependency>
+		<dependency>
 			<groupId>br.com.vitafarma.web</groupId>
 			<artifactId>shared</artifactId>
 			<version>${project.version}</version>
@@ -30,6 +35,7 @@
 		<testSourceDirectory>../test</testSourceDirectory>
 		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>../target/test-classes</testOutputDirectory>
+		<finalName>Vitafarma-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -43,8 +49,8 @@
 				</executions>
 				<configuration>
 					<compileSourcesArtifacts>
-						<compileSourcesArtifact>javax.validation:validation-api:1.0.0.GA:jar</compileSourcesArtifact>
-						<compileSourcesArtifact>br.com.vitafarma.domain:vitafarma_domain:1.0.0-SNAPSHOT:jar</compileSourcesArtifact>
+						<compileSourcesArtifact>javax.validation:validation-api</compileSourcesArtifact>
+						<compileSourcesArtifact>br.com.vitafarma.domain:vitafarma_domain</compileSourcesArtifact>
 					</compileSourcesArtifacts>
 					<moduleName>br.com.vitafarma.web.Vitafarma</moduleName>
 					<runTarget>Vitafarma.html</runTarget>
@@ -53,32 +59,17 @@
 					<noServer>true</noServer>
 					<port>${tomcat.webport}</port>
 					<runTarget>${tomcat.context}</runTarget>
-					<excludes>
-						<exclude>**/br/com/vitafarma/web/shared/**</exclude>
-						<exclude>**/br/com/vitafarma/web/server/**</exclude>
-					</excludes>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
-				<configuration>
-					<excludes>
-						<exclude>**/br/com/vitafarma/web/shared/**</exclude>
-						<exclude>**/br/com/vitafarma/web/server/**</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>**/br/com/vitafarma/web/shared/**</exclude>
-						<exclude>**/br/com/vitafarma/web/server/**</exclude>
-					</excludes>
-				</configuration>
+				<version>2.4</version>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -93,10 +84,6 @@
 				</executions>
 				<configuration>
 					<webappDirectory>${webappDirectory}</webappDirectory>
-					<!-- <excludes> -->
-					<!-- <exclude>**/br/com/vitafarma/web/shared/**</exclude> -->
-					<!-- <exclude>**/br/com/vitafarma/web/server/**</exclude> -->
-					<!-- </excludes> -->
 				</configuration>
 			</plugin>
 		</plugins>
