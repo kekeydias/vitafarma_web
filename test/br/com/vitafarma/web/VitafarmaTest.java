@@ -4,13 +4,11 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.junit.client.GWTTestCase;
 import com.google.gwt.user.client.Timer;
 
-import br.com.vitafarma.web.client.Vitafarma;
-
 public class VitafarmaTest // extends GWTTestCase {
 {
 	// @Override
 	public String getModuleName() {
-		return ("br.com.vitafarma.web.Vitafarma");
+		return "br.com.vitafarma.web.Vitafarma";
 	}
 
 	// FIXME
@@ -19,9 +17,10 @@ public class VitafarmaTest // extends GWTTestCase {
 	}
 
 	// FIXME
-	public void t2estSimple() {
-		GWT.create(Vitafarma.class);
-
+	@SuppressWarnings("rawtypes")
+	public void t2estSimple() throws ClassNotFoundException {
+		Class c = Class.forName("br.com.vitafarma.web.client.Vitafarma");
+		GWT.create(c);
 		GWTTestCase.assertTrue(true);
 	}
 

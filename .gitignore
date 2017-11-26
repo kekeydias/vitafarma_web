@@ -17,3 +17,6 @@ war/log4j.log
 /war/extgwt
 war/images/Thumbs.db
 distribution/
+/server/target
+/shared/target
+/web/target
