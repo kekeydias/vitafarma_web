@@ -29,34 +29,22 @@
 		</dependency>
 	</dependencies>
 
-	<properties>
-		<persistenceXml>../../vitafarma_domain/resources/META-INF</persistenceXml>
-	</properties>
-
 	<build>
 		<sourceDirectory>../src</sourceDirectory>
 		<scriptSourceDirectory>../scripts</scriptSourceDirectory>
 		<testSourceDirectory>../test</testSourceDirectory>
 		<outputDirectory>../${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>../target/test-classes</testOutputDirectory>
-		<finalName>Vitafarma-${project.version}</finalName>
-
+		<finalName>Vitafarma</finalName>
 		<resources>
-<!-- 			<resource> -->
-<!-- 				<directory>../war</directory> -->
-<!-- 				<includes> -->
-<!-- 					<include>*</include> -->
-<!-- 				</includes> -->
-<!-- 			</resource> -->
 			<resource>
-				<directory>${persistenceXml}</directory>
+				<directory>${persistence_xml}</directory>
 				<targetPath>META-INF</targetPath>
 				<includes>
 					<include>persistence.xml</include>
 				</includes>
 			</resource>
 		</resources>
-
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -106,6 +94,26 @@
 				<configuration>
 					<webappDirectory>../${webappDirectory}</webappDirectory>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<descriptors>
+						<descriptor>./distribution.xml</descriptor>
+					</descriptors>
+					<finalName>Vitafarma</finalName>
+				</configuration>
+				<executions>
+					<execution>
+						<id>distribution</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
