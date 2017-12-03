@@ -33,18 +33,8 @@
 		<sourceDirectory>../src</sourceDirectory>
 		<scriptSourceDirectory>../scripts</scriptSourceDirectory>
 		<testSourceDirectory>../test</testSourceDirectory>
-		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>../target/test-classes</testOutputDirectory>
-
-		<resources>
-			<resource>
-				<directory>src</directory>
-				<includes>
-					<include>*.xml</include>
-					<include>*.properties</include>
-				</includes>
-			</resource>
-		</resources>
+		<outputDirectory>../${webappDirectory}/WEB-INF/classes</outputDirectory>
 
 		<plugins>
 			<plugin>

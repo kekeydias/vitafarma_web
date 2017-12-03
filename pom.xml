@@ -38,7 +38,7 @@
 		<mail.version>1.2</mail.version>
 		<resteasy.version>3.0.11.Final</resteasy.version>
 		<htmlunit.version>2.15</htmlunit.version>
-		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+		<webappDirectory>war</webappDirectory>
 		<gae.home>${settings.localRepository}/com/google/appengine/appengine-java-sdk/${gae.version}/appengine-java-sdk-${gae.version}</gae.home>
 	</properties>
 
@@ -65,13 +65,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>1.0.0.GA</version>
-			<classifier>sources</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -115,6 +108,7 @@
 		<testSourceDirectory>test</testSourceDirectory>
 		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>target\test-classes</testOutputDirectory>
+
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>

@@ -29,13 +29,34 @@
 		</dependency>
 	</dependencies>
 
+	<properties>
+		<persistenceXml>../../vitafarma_domain/resources/META-INF</persistenceXml>
+	</properties>
+
 	<build>
 		<sourceDirectory>../src</sourceDirectory>
 		<scriptSourceDirectory>../scripts</scriptSourceDirectory>
 		<testSourceDirectory>../test</testSourceDirectory>
-		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+		<outputDirectory>../${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>../target/test-classes</testOutputDirectory>
 		<finalName>Vitafarma-${project.version}</finalName>
+
+		<resources>
+<!-- 			<resource> -->
+<!-- 				<directory>../war</directory> -->
+<!-- 				<includes> -->
+<!-- 					<include>*</include> -->
+<!-- 				</includes> -->
+<!-- 			</resource> -->
+			<resource>
+				<directory>${persistenceXml}</directory>
+				<targetPath>META-INF</targetPath>
+				<includes>
+					<include>persistence.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -55,7 +76,7 @@
 					<moduleName>br.com.vitafarma.web.Vitafarma</moduleName>
 					<runTarget>Vitafarma.html</runTarget>
 					<draftCompile>true</draftCompile>
-					<hostedWebapp>${webappDirectory}</hostedWebapp>
+					<hostedWebapp>../${webappDirectory}</hostedWebapp>
 					<noServer>true</noServer>
 					<port>${tomcat.webport}</port>
 					<runTarget>${tomcat.context}</runTarget>
@@ -83,7 +104,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<webappDirectory>${webappDirectory}</webappDirectory>
+					<webappDirectory>../${webappDirectory}</webappDirectory>
 				</configuration>
 			</plugin>
 		</plugins>

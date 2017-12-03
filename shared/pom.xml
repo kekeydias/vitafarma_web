@@ -15,8 +15,9 @@
 		<sourceDirectory>../src</sourceDirectory>
 		<scriptSourceDirectory>../scripts</scriptSourceDirectory>
 		<testSourceDirectory>../test</testSourceDirectory>
-		<outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
 		<testOutputDirectory>../target/test-classes</testOutputDirectory>
+		<outputDirectory>../${webappDirectory}/WEB-INF/classes</outputDirectory>
+
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
